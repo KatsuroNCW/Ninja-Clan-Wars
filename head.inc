@@ -25,7 +25,6 @@
 <script defer src="js/animations.js"></script>
 <script defer src="js/bbcodeMenuV2.js"></script>
 <script defer src="js/jquery.sticky.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
 
 <script>
   $(document).ready(function(){

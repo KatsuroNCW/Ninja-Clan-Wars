@@ -88,9 +88,6 @@ $user_data = $user->data();
 </div>
 
 <main class="forum">
-	<button class="request-btn">Request permissions</button>
-    <button class="show-btn">Show notification</button>
-    <script src="js/push.js"></script>
 <?php
 	$cat = new Category();
 	$cat->showAll();
