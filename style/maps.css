@@ -1,0 +1,76 @@
+/* ZMIENNE */
+/* MIXINY */
+@media (max-width: 480px) {
+  .map {
+    width: 100%; } }
+@media (min-width: 481px) and (max-width: 1023px) {
+  .map {
+    width: 100%; } }
+@media (min-width: 1024px) {
+  .map {
+    width: 1000px;
+    margin: 0 auto; } }
+
+.map__disable {
+  display: none; }
+  @media (max-width: 1023px) {
+    .map__disable {
+      display: block;
+      background: #2f0101;
+      border: 1px solid #880202;
+      border-left: 5px solid #880202;
+      color: #d2bcbb;
+      padding: 5px 10px;
+      margin: 20px 0; } }
+
+.map__header {
+  font-size: 25px;
+  text-transform: uppercase;
+  background: #0b4a77;
+  border: 1px solid #1c5b88;
+  margin: 20px 0 10px;
+  padding: 10px;
+  text-align: center; }
+
+.map__container {
+  background: #131313;
+  border: 1px solid #353434;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 579px; }
+  @media (max-width: 1023px) {
+    .map__container {
+      display: none; } }
+
+.map__box {
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.85); }
+
+.map-box__header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 30px;
+  margin: 40px 0 0; }
+
+#shiso {
+  display: none; }
+
+.map__box--land {
+  z-index: 2; }
+
+.map__box--main {
+  z-index: 1; }
+
+.map__land-description {
+  position: absolute;
+  padding: 10px 15px;
+  background: #0b4a77;
+  border: 1px solid #1c5b88; }
+
+/*# sourceMappingURL=maps.css.map */

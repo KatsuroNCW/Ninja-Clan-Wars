@@ -1,0 +1,46 @@
+/* COLORS */
+.promotion__description {
+  border-top: 5px solid #0b4a77;
+  background: #131313;
+  padding: 15px;
+  text-align: justify;
+  font-size: 16px;
+  line-height: 24px; }
+  .promotion__description a {
+    background: #0b4a77;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    transition: background 0.5s; }
+    .promotion__description a:hover {
+      background: #063252; }
+.promotion__box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  @media (max-width: 480px) {
+    .promotion__box {
+      flex-direction: column; } }
+.promotion-item {
+  width: 340px;
+  max-width: 480px;
+  border-top: 5px solid #1f1f1f;
+  background: #131313;
+  margin: 10px;
+  flex-grow: 1; }
+  .promotion-item__info {
+    font-size: 12px;
+    text-align: center; }
+  .promotion-item__code {
+    word-wrap: break-word;
+    border: 1px solid #1f1f1f;
+    background: #0D0D0D;
+    margin: 10px;
+    padding: 10px;
+    font-size: 13px;
+    font-family: monospace; }
+  .promotion-item img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%; }
+
+/*# sourceMappingURL=promotion.css.map */

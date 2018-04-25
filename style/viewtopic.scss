@@ -1,0 +1,312 @@
+@import "mixins";
+
+.viewtopic {
+	&-info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &__buttons {
+            display: flex;
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.post {
+    margin: 10px 0 30px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    &-left {
+        display: flex;
+        flex-direction: column;
+        width: 185px;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &__author {
+            background: #1f1f1f;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 9px;
+            font-size: 15px;
+            transition: background 0.5s;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background: #063252;
+            }
+        }
+
+        &__avatar {
+            border-bottom: 5px solid #1f1f1f;
+            background: #0D0D0D;
+            box-sizing: border-box;
+            margin: 0 0 5px;
+
+            @include mobile {
+                display: none;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &__rang {
+            padding: 0 10px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 13px;
+            line-height: 33px;
+            background: #131313;
+            border: 1px solid #1f1f1f;
+            margin: 2px 0;
+        }
+    }
+
+    &-right {
+        border-bottom: 1px solid #1f1f1f;
+        background: #131313;
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        height: 100%;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &__info {
+            background: #1f1f1f;
+            text-align: right;
+            padding: 10px;
+            font-size: 14px;
+            transition: background 0.5s, color 0.5s;
+
+            &:hover {
+                background: #063252;
+                color: #fff;
+            }
+        }
+
+        &__img {
+            position: relative;
+            border-bottom: 5px solid #1f1f1f;
+            
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            &:before {
+                content: "";
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url(img/news-shadow-big.png) repeat-x left bottom;
+                opacity: .8;
+                transition: all .3s ease-in-out;
+            }
+        }
+
+        &__contents {
+            font-family: 'Lato', sans-serif;
+            padding: 20px;
+            font-size: 15px;
+            word-wrap: break-word;
+            line-height: 18px;
+            img {
+                max-width: 100%;
+            }
+
+            &-edited {
+                font-size: 11px;
+                color: #555;
+                margin: 15px 10px 0;
+                text-align: right;
+
+                &-icon {
+                    margin: 0 5px 0 0;
+                    font-size: 13px;
+                }
+            }
+
+            &--hide {
+                background: #1f1f1f;
+
+                &-header {
+                    color: #7b7b7b;
+                    margin: 0 0 10px;
+                }
+            }
+
+            a {
+                background-image: -webkit-linear-gradient(top,transparent 0,#0b4a77 0);
+                background-position: 0 16px;
+                background-repeat: no-repeat;
+                padding: 0 2px;
+                transition: all .1s ease-out;
+
+                &:hover {
+                    background-position: 0;
+                    color: #fff;
+                }
+            }
+        }
+
+        &__options {
+            background: #1f1f1f;
+            text-align: right;
+            border-top: 1px solid #131313;
+
+            &-link {
+                padding: 9px 15px;
+                display: inline-block;
+                font-size: 13px;
+                text-transform: uppercase;
+                transition: background 0.5s, color 0.5s;
+
+                &:hover {
+                    background: #063252;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-center {
+        width: 100%;
+        border-bottom: 1px solid #1f1f1f;
+        background: #131313;
+        display: flex;
+        flex-direction: column;
+
+        @include mobile {
+            margin: 0;
+        }
+    } 
+}
+
+
+/* POST FORMATS */
+
+
+/* TABLE */
+table {
+    text-align: center;
+    font-size: 15px;
+    margin: 10px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+tr {
+    opacity: 1;
+}
+
+tr:hover {
+    opacity: 0.8;
+}
+
+td {
+    background: #131313;
+    padding: 10px;
+    border: 1px solid #1f1f1f;
+    vertical-align: middle;
+}
+
+.table-header {
+    background: #2d2d2d;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+/* BBCODE FORMAT */
+
+.strong {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.wysrodkowanie {
+  text-align: center;
+}
+
+.do_prawej {
+  text-align: right; 
+}
+
+.akapit {
+  text-indent: 25px; 
+}
+
+.jutsu {
+  background: #1c74b2;
+  color: #fff;
+  padding: 1px 3px;
+  text-transform: uppercase; 
+}
+
+.katon {
+  background: #ff0000; 
+}
+
+.suiton {
+  background: #00a1ff; 
+}
+
+.raiton {
+  background: #efff00;
+  color: #000; 
+}
+
+.doton {
+  background: #4a2002; 
+}
+
+.futon {
+  background: #05935f; 
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.11);
+  padding: 10px;
+  border: 1px solid #191919; 
+}
+
+blockquote {
+    background: #0d0d0d;
+    padding: 15px;
+    border: 1px solid #1f1f1f;
+    border-left: 5px solid #1f1f1f;
+}
+
+cite {
+    word-wrap: break-word;
+    display: block;
+    margin: 0 0 10px;
+    color: #545454;
+    font-size: 13px;
+}
+
+.blockquote-cite {
+    font-size: 25px;
+}

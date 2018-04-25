@@ -1,0 +1,15 @@
+
+.icon-menu:before { content: '\e800'; } /* '' */
+.icon-login:before { content: '\e801'; } /* '' */
+.icon-user-add:before { content: '\e802'; } /* '' */
+.icon-home:before { content: '\e803'; } /* '' */
+.icon-switch:before { content: '\e804'; } /* '' */
+.icon-up-open:before { content: '\e805'; } /* '' */
+.icon-warning-empty:before { content: '\e806'; } /* '' */
+.icon-attention:before { content: '\e807'; } /* '' */
+.icon-globe:before { content: '\e808'; } /* '' */
+.icon-trash-empty:before { content: '\e809'; } /* '' */
+.icon-quote:before { content: '\e80a'; } /* '' */
+.icon-pencil:before { content: '\e80b'; } /* '' */
+.icon-check:before { content: '\e80c'; } /* '' */
+.icon-quote-right:before { content: '\f10e'; } /* '' */

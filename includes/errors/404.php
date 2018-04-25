@@ -1,0 +1,1 @@
+ERROR 404! Nie można odnaleźć strony!

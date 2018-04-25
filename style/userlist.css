@@ -1,0 +1,70 @@
+/* COLORS */
+@media (max-width: 480px) {
+  .userlists {
+    width: 100%; } }
+@media (min-width: 481px) and (max-width: 1023px) {
+  .userlists {
+    width: 100%; } }
+@media (min-width: 1024px) {
+  .userlists {
+    width: 1000px;
+    margin: 0 auto; } }
+.userlists__options {
+  display: flex; }
+.userlists__box {
+  margin: 5px;
+  flex-grow: 1;
+  width: 200px; }
+  .userlists__box:first-child {
+    margin: 5px 5px 5px 0; }
+  .userlists__box:last-child {
+    margin: 5px 0 5px 5px; }
+.userlists__list {
+  font-size: 16px;
+  background: #131313;
+  border: 1px solid #1f1f1f; }
+
+.user-item {
+  display: flex;
+  border-bottom: 1px solid #1f1f1f;
+  padding: 10px 0; }
+  .user-item--heading {
+    padding: 0; }
+  .user-item__block {
+    margin: 1px;
+    width: 150px;
+    text-align: center; }
+    .user-item__block--heading {
+      padding: 10px 0;
+      box-sizing: border-box;
+      text-transform: uppercase;
+      background: #0b4a77;
+      overflow: hidden; }
+    .user-item__block--login {
+      flex-grow: 2; }
+    .user-item__block--groups {
+      flex-grow: 3; }
+    .user-item__block--posts {
+      flex-grow: 1; }
+    .user-item__block--register-date {
+      flex-grow: 2; }
+  .user-item__status {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    box-shadow: inset 0 0 5px #000;
+    border: 1px solid #1f1f1f;
+    margin: 0 5px; }
+    .user-item__status--online {
+      background: #009027; }
+    .user-item__status--offline {
+      background: #690000; }
+  .user-item__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .user-item__link:hover {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=userlist.css.map */

@@ -1,0 +1,178 @@
+@import "mixins";
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-left {
+        @include mobile {
+            margin: 15px 20px;
+            width: 100%;
+        }
+        @include tablet {
+            margin: 0 10px 0 0;
+            width: 185px;
+        }
+        @include desktop {
+            margin: 0 10px 0 0;
+            width: 185px;
+        }
+
+        &__login {
+            padding: 0 10px;
+            line-height: 40px;
+            background: #0b4a77;
+            border: 1px solid #1c5b88;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 15px;
+            text-shadow: 0 0 5px #000;
+        }
+
+        &__avatar {
+            width: 185px;
+            height: 260px;
+            border: 1px solid #1f1f1f;
+            box-sizing: border-box;
+
+            @include mobile {
+                margin: 10px auto;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &-right {
+        @include mobile {
+            margin: 0 20px;
+            width: 100%;
+        }
+        @include tablet {
+            width: 480px;
+            flex-grow: 1;
+        }
+        @include desktop {
+            width: 480px;
+            flex-grow: 1;
+        }
+    }
+
+    &__heading {
+        background: #131313;
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 17px;
+        border-left: 5px solid #0b4a77;
+    }
+}
+
+.profile-nav {
+    border-right: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+
+    &__item {
+        text-align: center;
+    }
+
+    &__link {
+        background: #131313;
+        border-left: 4px solid #1f1f1f;
+        padding: 9px 0;
+        display: block;
+        color: #aaa;
+        margin: 1px 0;
+        text-transform: uppercase;
+        font-size: 13px;
+        transition: background 0.5s, color 0.5s, border 0.5s;
+
+        &:hover {
+            border-left: 4px solid #1c5b88;
+            background: #063252;
+            color: #fff;
+        }
+    }
+}
+
+.profile-informations {
+    padding: 15px 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        box-sizing: border-box;
+        width: 200px;
+        max-width: 250px;
+        flex-grow: 1;
+        margin: 5px;
+    }
+
+    &__name {
+        font-size: 15px;
+        background: #0b4a77;
+        padding: 0 10px;
+        line-height: 35px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__value {
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+        background: #131313;
+    }
+
+    &__mail {
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.profile-decorations {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 185px;
+        margin: 10px 5px;
+        border: 1px solid #1f1f1f;
+
+        @include mobile {
+            margin: 10px auto;
+        }
+
+        img {
+            display: block;
+            background: #0b4a77;
+            padding: 10px;
+        }
+    }
+
+    &__description {
+        background: #131313;
+        padding: 5px;
+        font-size: 15px;
+        text-align: center;
+        border-top: 1px solid #1f1f1f;
+    }
+
+    &__no-data {
+        background: #131313;
+        border-top: 5px solid #0b4a77;
+        line-height: 35px;
+        font-size: 16px;
+        margin: 10px 0 0;
+        width: 100%;
+        text-align: center;
+    }
+}

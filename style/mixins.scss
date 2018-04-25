@@ -1,0 +1,31 @@
+@mixin mobile {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: 481px) and (max-width: 1023px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin mobileTablet {
+    @media (max-width: 1023px) {
+        @content;
+    }
+}
+
+/* COLORS */
+
+$online: #009027;
+$offline: #690000;
+
+$borderMain: #1f1f1f;
+$shadow: #000;

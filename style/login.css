@@ -1,0 +1,47 @@
+/* COLORS */
+.login, .register {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+  @media (max-width: 1023px) {
+    .login, .register {
+      width: 100%;
+      justify-content: center; } }
+  @media (min-width: 1024px) {
+    .login, .register {
+      width: 1000px;
+      margin: 0 auto; } }
+  .login__logotype, .register__logotype {
+    max-width: 500px; }
+    @media (max-width: 1023px) {
+      .login__logotype, .register__logotype {
+        margin: 40px 0 0; } }
+    .login__logotype img, .register__logotype img {
+      display: block;
+      width: 100%; }
+  .login__form, .register__form {
+    display: flex;
+    flex-direction: column;
+    width: 300px; }
+  .login__label, .register__label {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: color 0.5s; }
+  .login__info, .register__info {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: right;
+    margin: 5px 0; }
+  .login__link, .register__link {
+    color: #1c5b88;
+    transition: color 0.5s; }
+    .login__link:hover, .register__link:hover {
+      color: #fff; }
+
+/*# sourceMappingURL=login.css.map */
