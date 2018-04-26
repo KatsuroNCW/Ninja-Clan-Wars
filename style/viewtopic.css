@@ -150,16 +150,17 @@ table {
   text-align: center;
   font-size: 15px;
   margin: 15px;
-  font-family: 'Signika Negative', sans-serif; }
+  font-family: 'Signika Negative', sans-serif;
+  box-shadow: 0 0 5px #0d0d0d; }
 
 td {
-  background: #0d0d0d;
+  background: #1f1f1f;
   padding: 10px 20px;
-  border: 1px solid #1f1f1f;
+  border: 1px solid #0d0d0d;
   vertical-align: middle; }
 
 .table-header {
-  background: #151515;
+  background: #0b4a77;
   text-transform: uppercase;
   vertical-align: middle; }
 
@@ -210,7 +211,8 @@ blockquote {
   background: #0d0d0d;
   padding: 15px;
   border: 1px solid #1f1f1f;
-  border-left: 5px solid #1f1f1f; }
+  border-left: 5px solid #1f1f1f;
+  margin: 10px 0; }
 
 cite {
   word-wrap: break-word;
