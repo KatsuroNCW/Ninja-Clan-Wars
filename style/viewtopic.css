@@ -149,23 +149,17 @@
 table {
   text-align: center;
   font-size: 15px;
-  margin: 10px;
+  margin: 15px;
   font-family: 'Signika Negative', sans-serif; }
 
-tr {
-  opacity: 1; }
-
-tr:hover {
-  opacity: 0.8; }
-
 td {
-  background: #131313;
-  padding: 10px;
+  background: #0d0d0d;
+  padding: 10px 20px;
   border: 1px solid #1f1f1f;
   vertical-align: middle; }
 
 .table-header {
-  background: #2d2d2d;
+  background: #151515;
   text-transform: uppercase;
   vertical-align: middle; }
 
