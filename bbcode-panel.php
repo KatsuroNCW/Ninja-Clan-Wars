@@ -12,11 +12,11 @@
 	<a href="#" class="bbcode__item" title="kod" data-bbcode_button="code">kod</a>
 	<a href="#" class="bbcode__item" title="youtube" data-bbcode_button="youtube">youtube</a>
 	<span class="bbcode__input">
-		<input type="color" id="colorpicker" class="bbcode__colorpicker">
+		<input type="color" class="bbcode__colorpicker">
 		<input type="button" class="bbcode__button" value="ustaw kolor" data-bbcode_button="color" data-need_value="1">
 	</span>
 	<span class="bbcode__input bbcode__input--font-sizer">
-		<input type="number" id="font-size-number" class="bbcode__font-size" min="10" max="35" value="15">
+		<input type="number" class="bbcode__font-size" min="10" max="35" value="15">
 		<input type="button" class="bbcode__button" value="ustaw rozmiar" data-bbcode_button="size" data-need_value="1">
 	</span>
 </div>

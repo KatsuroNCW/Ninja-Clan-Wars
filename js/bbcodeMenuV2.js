@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 	(function() {
 		const buttons = document.querySelectorAll('.bbcode__item, .bbcode__button');
-
 		for (let i = 0; i < buttons.length; i++) {
 			buttons[i].addEventListener('click', function(e) {
 				e.preventDefault();
@@ -10,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
 					var module = button.parentElement.parentElement;
 				} else {
 					var module = button.parentElement.parentElement.parentElement;
-					const buttonInput = button.parentElement.firstElementChild;
-					const valueInput = buttonInput.value;
+					var buttonInput = button.parentElement.firstElementChild;
+					var valueInput = buttonInput.value;
 				}
 				const textarea = module.querySelector('.form__input--textarea');
 				const buttonId = button.getAttribute('id');
@@ -25,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
 					textarea.value = beforeSelected + '[' + tag + ']' + selectedText + '[/' + tag + ']' + afterSelected;
 		        	cursorPosition = beforeSelected + '[' + tag + ']' + selectedText + '[/' + tag + ']';
 				} else {
-					textarea.value = beforeSelected + '[' + tag + valueInput + ']' + selectedText + '[/' + tag + ']' + afterSelected;
-		        	cursorPosition = beforeSelected + '[' + tag + valueInput + ']' + selectedText + '[/' + tag + ']';
+					textarea.value = beforeSelected + '[' + tag + '=' + valueInput + ']' + selectedText + '[/' + tag + ']' + afterSelected;
+		        	cursorPosition = beforeSelected + '[' + tag + '=' + valueInput + ']' + selectedText + '[/' + tag + ']';
 				}
 
 				textarea.selectionEnd = cursorPosition.length;

@@ -240,8 +240,10 @@ if($user->isLoggedIn()) {
 	echo '<section class="quick-reply wrapper">';
 		echo '<h2 class="big-heading">Szybka odpowiedź</h2>';
 		echo '<form method="post" action="post.php?id='.$topic_data->topic_id.'">';
-			include_once('bbcode-panel.php');
-			echo '<textarea id="bbcode-menu" class="form__input form__input--textarea" name="post_contents" placeholder="Treść posta"></textarea>';
+			echo '<div class="textarea-panel">';
+				include_once('bbcode-panel.php');
+				echo '<textarea class="form__input form__input--textarea" name="post_contents" placeholder="Treść posta"></textarea>';
+			echo '</div>';
 			echo '<input type="submit" value="Wyślij posta" name="submit_post" class="form__button form__button--first">';
 			echo '<input type="submit" value="Podgląd" name="submit_preview" class="form__button">';
 			echo '<input type="submit" value="Zapisz szkic" name="submit_save_draft" class="form__button">';
