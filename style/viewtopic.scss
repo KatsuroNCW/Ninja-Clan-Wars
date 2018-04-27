@@ -211,27 +211,20 @@
 table {
     text-align: center;
     font-size: 15px;
-    margin: 10px;
+    margin: 15px;
     font-family: 'Signika Negative', sans-serif;
-}
-
-tr {
-    opacity: 1;
-}
-
-tr:hover {
-    opacity: 0.8;
+    box-shadow: 0 0 5px #0d0d0d;
 }
 
 td {
-    background: #131313;
-    padding: 10px;
-    border: 1px solid #1f1f1f;
+    background: #1f1f1f;
+    padding: 10px 20px;
+    border: 1px solid #0d0d0d;
     vertical-align: middle;
 }
 
 .table-header {
-    background: #2d2d2d;
+    background: #0b4a77;
     text-transform: uppercase;
     vertical-align: middle;
 }
@@ -239,57 +232,57 @@ td {
 /* BBCODE FORMAT */
 
 .strong {
-  font-weight: bold;
+    font-weight: 800;
 }
 
 .italic {
-  font-style: italic;
+    font-style: italic;
 }
 
-.wysrodkowanie {
-  text-align: center;
+.center {
+    text-align: center;
 }
 
-.do_prawej {
-  text-align: right; 
+.right {
+    text-align: right; 
 }
 
-.akapit {
-  text-indent: 25px; 
+.paragraph {
+    margin: 5px 0;
 }
 
 .jutsu {
-  background: #1c74b2;
-  color: #fff;
-  padding: 1px 3px;
-  text-transform: uppercase; 
+    background: #1c74b2;
+    color: #fff;
+    padding: 1px 3px;
+    text-transform: uppercase; 
 }
 
 .katon {
-  background: #ff0000; 
+    background: #ff0000; 
 }
 
 .suiton {
-  background: #00a1ff; 
+    background: #00a1ff; 
 }
 
 .raiton {
-  background: #efff00;
-  color: #000; 
+    background: #efff00;
+    color: #000; 
 }
 
 .doton {
-  background: #4a2002; 
+    background: #4a2002; 
 }
 
 .futon {
-  background: #05935f; 
+    background: #05935f; 
 }
 
 pre {
-  background: rgba(0, 0, 0, 0.11);
-  padding: 10px;
-  border: 1px solid #191919; 
+    background: rgba(0, 0, 0, 0.11);
+    padding: 10px;
+    border: 1px solid #191919; 
 }
 
 blockquote {
@@ -297,6 +290,7 @@ blockquote {
     padding: 15px;
     border: 1px solid #1f1f1f;
     border-left: 5px solid #1f1f1f;
+    margin: 10px 0;
 }
 
 cite {
