@@ -153,7 +153,7 @@ echo '</div>';
 						echo '<div class="post-center">';
 					}
 						echo '<a class="post-right__info" href="viewtopic.php?pid='.$post->post_id.'#p'.$post->post_id.'">dodano: '.dateFormat($post->post_date).'</a>';
-						if($first_post && file_exists(imageType('style/img/topic/'.$topic_data->topic_id))) {
+						if($page === 1 && $first_post && file_exists(imageType('style/img/topic/'.$topic_data->topic_id))) {
 							echo '<div class="post-right__img"><img src="'.imageType('style/img/topic/'.$topic_data->topic_id).'"></div>';
 							$first_post = false;
 						}
