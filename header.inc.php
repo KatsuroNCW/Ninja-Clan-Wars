@@ -28,7 +28,7 @@
 		<ul class="menu">
 			<li class="menu__item"><a href="index.php">Portal</a></li>
 			<li class="menu__item"><a href="forum.php">Forum</a></li>
-			<li class="menu__item has-submenu"><a href="javascript: void(0)">Baza opisów <span class="menu__item-arrow"></span></a>
+			<li class="menu__item has-submenu"><a href="#">Baza opisów <span class="menu__item-arrow"></span></a>
 				<ul class="submenu">
 					<li class="submenu__item"><a href="#">Profesje</a></li>
 					<li class="submenu__item"><a href="#">Style walki</a></li>
@@ -42,7 +42,7 @@
 				</ul>
 			</li>
 			<li class="menu__item"><a href="maps.php">Mapy świata</a></li>
-			<li class="menu__item has-submenu"><a href="javascript: void(0)">Opcje forum <span class="menu__item-arrow"></span></a>
+			<li class="menu__item has-submenu"><a href="#">Opcje forum <span class="menu__item-arrow"></span></a>
 				<ul class="submenu">
 					<li class="submenu__item"><a href="userlist.php">Lista użytkowników</a></li>
 					<li class="submenu__item"><a href="promotion.php">Materiały promocyjne</a></li>

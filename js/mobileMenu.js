@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		const landSwitcherButton = mobileMenu.querySelector('.mobile-nav__item--switcher');
 		const mainNav = document.querySelector('.main-navigation');
 		const menuButton = mobileMenu.querySelector('.mobile-nav__item--menu');
-		const submenuButtons = mainNav.querySelectorAll('.has-submenu');
+		const submenuButtons = mainNav.querySelectorAll('.has-submenu > a');
+		console.log(submenuButtons);
 
 		landSwitcherButton.addEventListener('click', function(e) {
 			e.preventDefault();
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		for (var i=0; i<submenuButtons.length; i++) {
 			submenuButtons[i].addEventListener('click', function(e) {
 				e.preventDefault();
-				this.querySelector('.submenu').classList.toggle('submenu--active');
+				this.parentElement.querySelector('.submenu').classList.toggle('submenu--active');
 			});
 		}
 	}());
