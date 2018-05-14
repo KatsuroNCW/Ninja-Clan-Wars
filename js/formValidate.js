@@ -196,6 +196,6 @@ const validateForm = (function() {
 })();
 
 document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector('.register__form');
+    const form = document.querySelector('.form');
     validateForm.init({form : form})
 });

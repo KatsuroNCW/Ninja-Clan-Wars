@@ -71,18 +71,27 @@ if(Input::exists('post', 'submit_login')) {
 		<div class="login__logotype"><a href="forum.php"><img src="style/img/logotype.png"></a></div>
 		<form method="post" class="form login__form">
 			<h2 class="left-border-heading">Logowanie</h2>
-			<input type="text" name="login" placeholder="Podaj nazwę użytkownika..." value="<?php echo escape(Input::get('login')); ?>" class="form__input form__input--vertical">
-			<input type="password" name="password" placeholder="Podaj hasło..." class="form__input form__input--vertical">
-			<div class="form__label-box form__label-box--nobg">
-				<label class="form__label-box-label form__label-box-label--checkbox">
-					Zapamiętaj mnie <input type="checkbox" name="remember" class="form__label-box-checkbox">
-				</label>
-			</div>
+			<label class="form__prompt-label">
+				<input type="text" name="login" required="required" data-validateForm="login" placeholder="Podaj nazwę użytkownika..." value="<?php echo escape(Input::get('login')); ?>" class="form__input form__input--vertical">
+			</label>
+			<label class="form__prompt-label">
+				<input type="password" name="password" required="required" data-validateForm="password" placeholder="Podaj hasło..." class="form__input form__input--vertical">
+			</label>
+			<label class="form__prompt-label">
+				<div class="checkbox-panel">
+					<div class="checkbox-panel__checkbox">
+						<input type="checkbox" name="remember" id="rememberCheckbox" class="form__input--checkbox">
+						<label for="rememberCheckbox"></label>
+					</div>
+					<div class="checkbox-panel__description">Zapamiętaj mnie</div>
+				</div>
+			</label>
 
 			<input type="submit" value="Zaloguj się" name="submit_login" class="form__button form__button--center">
 
 			<div class="login__info">Nie masz konta? <a class="login__link" href="register.php">Zarejestruj się!</a></div>
 		</form>
+		<script src="js/formValidate.js"></script>
 		</div>
 	</section>
 </body>
