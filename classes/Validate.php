@@ -6,8 +6,8 @@ class Validate {
 			$_db = null,
 			$_clans_names = array("Uchiha", "Senju", "Nara", "Kiyoshi", "Ayatsuri", "Namikaze", "Sabaku", "Hyuga", "Yuki", "Inuzuka", "Kaguya", "Akimichi", "Aburame", "Futago", "Kuran Sen", "Kakukuro"),
 			$_charakters_names = array("Naruto", "Sasuke", "Hinata", "Kakashi", "Sakura", "Neji", "Sai", "Kabuto", "Madara", "Shikaramu", "Gai", "Rock Lee", "Konohamaru", "Kyuubi", "Boruto", "Obito", "Sarada", "Itachi", "Nagato", "Hinabi", "Orochimaru", "Minato", "Hagoromo", "Gaara", "Kurama", "Tsunade", "Hashirama", "Jiraiya", "Kushina", "Hiruzen", "Shisui", "Deirada", "Kisame", "Danzo", "Temari", "Ino", "Rin", "Mito", "Tobirama", "Sasori", "Kakuzu", "Hidan", "Asuma", "Karin", "Konan", "Hiashi", "Yamato", "Tenten", "Kiba", "Zabuza", "Zetsu", "Anko", "Yashiko", "Choji", "Kurenai", "Kimimaro", "Shino", "Shukaku", "Karui", "Mei", "Nawaki", "Kankuro", "Suigetsu", "Hanzo", "Haku", "Matatabi", "Darui", "Shizune", "Jugo", "Ao", "Yagura", "Guren", "Izuna", "Utakata", "Iruka", "Shikaku", "Yugito", "Kurotsuchi", "Chojuro", "Gamabunta", "Tobi", "Inoichi", "Raiga", "Onoki", "Hizashi", "Dan", "Chiyo", "Ibiki", "Omoi", "Gamamaru", "Kinkaku", "Manda", "Torune", "Mifune", "Gengetsu", "Yukimaru", "Hayate", "Sakon", "Ukon", "Akamaru", "Ebisu", "Yashamaru", "Gamakichi", "Ranmaru", "Moegi", "Katsuyu", "Ginkaku", "Udon", "Baki", "Tazuna", "Enma", "Fukasaku", "Kidomaru"),
-			// $_secret = "6Ldy3QsUAAAAAKGsKjFXHJIot8KGP-nKO6PaJC72";
-			$_secret = "6LcXnyYUAAAAAG56b_kDF11QA_DN7ccoPp3mVFqy";
+			$_secret = "6Ldy3QsUAAAAAKGsKjFXHJIot8KGP-nKO6PaJC72";
+			// $_secret = "6LcXnyYUAAAAAG56b_kDF11QA_DN7ccoPp3mVFqy";
 
 
 	public function __construct() {

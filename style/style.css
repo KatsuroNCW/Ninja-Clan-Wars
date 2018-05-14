@@ -204,6 +204,8 @@ a {
   .form__input--date {
     height: auto;
     resize: unset; }
+  .form__input--error {
+    border: 1px solid #880202; }
 .form__label-box {
   height: 40px;
   background: #131313;
@@ -239,17 +241,11 @@ a {
       border: 1px solid #1f1f1f;
       margin: 0;
       flex-direction: row; }
-  .form__label-box-link {
-    text-decoration: underline;
-    transition: color 0.5s;
-    margin: 0 0 0 3px; }
-    .form__label-box-link:hover {
-      color: #fff; }
 .form__prompt-label {
   position: relative;
   display: flex;
-  flex-direction: row-reverse; }
-  .form__prompt-label span {
+  flex-direction: column; }
+  .form__prompt-label .tooltip {
     position: absolute;
     top: 9px;
     right: 9px;
@@ -258,6 +254,11 @@ a {
     padding: 3px 9px;
     font-size: 14px;
     cursor: pointer; }
+  .form__prompt-label .label-error-msg {
+    color: #880202;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0 0 5px; }
 .form__button {
   padding: 7px 10px;
   text-shadow: 0 0 5px #000;
@@ -290,6 +291,52 @@ a {
   .form__button:hover {
     background: #063252;
     color: #fff; }
+
+.checkbox-panel {
+  display: flex; }
+  .checkbox-panel__checkbox {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    background: #1f1f1f;
+    margin: 10px; }
+    .checkbox-panel__checkbox label {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      cursor: pointer;
+      background: #131313;
+      box-shadow: inset 0 0 10px #131313; }
+      .checkbox-panel__checkbox label:after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: #0b4a77;
+        background: linear-gradient(top, #0b4a77 0%, #063252 100%);
+        box-shadow: inset 0 0 2px #000;
+        opacity: 0;
+        transition: opacity 0.5s; }
+      .checkbox-panel__checkbox label:hover::after {
+        opacity: 0.4; }
+    .checkbox-panel__checkbox .form__input--checkbox:checked + label:after {
+      opacity: 1; }
+  .checkbox-panel__description {
+    font-size: 14px;
+    margin: 15px 0; }
+    .checkbox-panel__description a {
+      background-image: -webkit-linear-gradient(top, transparent 0, #0b4a77 0);
+      background-position: 0 16px;
+      background-repeat: no-repeat;
+      padding: 0 2px;
+      transition: all .1s ease-out; }
+      .checkbox-panel__description a:hover {
+        background-position: 0;
+        color: #fff; }
 
 /* BUTTONS */
 .button {

@@ -99,7 +99,7 @@ if(Input::exists('post', "submit_register")) {
 <body>
 	<section class="register">
 		<div class="register__logotype"><a href="forum.php"><img src="style/img/logotype.png"></a></div>
-		<form method="post" class="form register__form">
+		<form method="post" class="form register__form" action="register.php">
 			<h2 class="left-border-heading">Rejestracja</h2>
 			<?php
 			if(Input::exists('post', "submit_register")) {
@@ -113,28 +113,35 @@ if(Input::exists('post', "submit_register")) {
 			}
 			?>
 			<label class="form__prompt-label">
-				<input type="text" name="login" placeholder="Podaj nazwę użytkownika..." value="<?php echo escape(Input::get('login')); ?>" class="form__input form__input--vertical">
+				<input type="text" name="login" required="required" data-validateForm="login" placeholder="Podaj nazwę użytkownika..." value="<?php echo escape(Input::get('login')); ?>" class="form__input form__input--vertical">
 				<span class="tooltip" title="Nazwa użytkownika może składać się jedynie z liter (bez polskich znaków diakrytycznych, dozwolone jedynie japońskie. Zabronione jest używanie imion z Naruto oraz nazw klanów.">?</span>
 			</label>
 			<label class="form__prompt-label">
-				<input type="text" name="email" placeholder="Podaj działający e-mail..." value="<?php echo escape(Input::get('email')); ?>" class="form__input form__input--vertical">
+				<input type="text" name="email" required="required" data-validateForm="email" placeholder="Podaj działający e-mail..." value="<?php echo escape(Input::get('email')); ?>" class="form__input form__input--vertical">
 				<span class="tooltip" title="Podanie poprawnego adresu e-mail umożliwi przesłanie specjalnych informacji użytkownikom.">?</span>
 			</label>
 			<label class="form__prompt-label">
-				<input type="password" name="password" placeholder="Podaj hasło..." class="form__input form__input--vertical">
+				<input type="password" name="password" required="required" data-validateForm="password" placeholder="Podaj hasło..." class="form__input form__input--vertical">
 				<span class="tooltip" title="Hasło musi składać się przynajmniej z 6 znaków.">?</span>
 			</label>
-			<input type="password" name="password_again" placeholder="Powtórz hasło..." class="form__input form__input--vertical">
-			<div class="form__label-box form__label-box--nobg">
-				<label class="form__label-box-label form__label-box-label--checkbox">
-					 Akceptuję <a href="rules.php" class="form__label-box-link">regulamin</a> <input type="checkbox" name="rules" class="form__label-box-checkbox"> 
-				</label>
-			</div>
-			<!-- <div class="g-recaptcha" data-sitekey="6Ldy3QsUAAAAAKC64J7D_QIxZmURRiz61Aemcf5_" data-theme="dark"></div> -->
-			<div class="g-recaptcha" data-sitekey="6LcXnyYUAAAAAOGsQLpETA0RG3rnJQcMqpyxzOId" data-theme="dark"></div>
+			<label class="form__prompt-label">
+				<input type="password" name="password_again" required="required" data-validateForm="password_again" placeholder="Powtórz hasło..." class="form__input form__input--vertical">
+			</label>
+			<label class="form__prompt-label">
+				<div class="checkbox-panel">
+					<div class="checkbox-panel__checkbox">
+						<input type="checkbox" name="rules" required="required" id="rulesCheckbox" class="form__input--checkbox">
+						<label for="rulesCheckbox" required="required" data-validateForm="rules"></label>
+					</div>
+					<div class="checkbox-panel__description">Akceptuję <a href="rules.php" class="form__label-box-link">regulamin</a></div>
+				</div>
+			</label>
+			<div class="g-recaptcha" data-sitekey="6Ldy3QsUAAAAAKC64J7D_QIxZmURRiz61Aemcf5_" data-theme="dark"></div>
+			<!-- <div class="g-recaptcha" data-sitekey="6LcGFikTAAAAAAEn0m2DILLa-d5A7sQ9iZclwbbh" data-theme="dark"></div> -->
 			<input type="submit" value="Zarejestruj się" name="submit_register" class="form__button form__button--center">
 			<div class="register__info">Masz już konto? <a class="register__link" href="login.php">Zaloguj się!</a></div>
 		</form>
+		<script src="js/formValidate.js"></script>
 	</section>
 </body>
 </html>
