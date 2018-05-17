@@ -33,14 +33,14 @@
     &__list {
         font-size: 16px;
         background: #131313;
-        border: 1px solid $borderMain;
+        border: 1px solid $mainBorderColor;
     }
 }
 
 
 .user-item {
 	display: flex;
-	border-bottom: 1px solid $borderMain;
+	border-bottom: 1px solid $mainBorderColor;
     padding: 10px 0;
 
     &--heading {
@@ -81,16 +81,16 @@
         width: 15px;
         height: 15px;
         display: inline-block;
-        box-shadow: inset 0 0 5px $shadow;
-        border: 1px solid $borderMain;
+        box-shadow: inset 0 0 5px #000;
+        border: 1px solid $mainBorderColor;
         margin: 0 5px;
 
         &--online {
-            background: $online;
+            background: $onlineColor;
         }
 
         &--offline {
-            background: $offline;
+            background: $offlineColor;
         }
     }
 

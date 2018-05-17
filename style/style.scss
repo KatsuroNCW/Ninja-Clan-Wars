@@ -17,7 +17,7 @@ html, body {
     background: #131313;
 }
 ::-webkit-scrollbar-thumb {
-    background: $borderMain;
+    background: $mainBorderColor;
 }
 ::-webkit-scrollbar-corner {
     background: #131313;
@@ -50,7 +50,7 @@ a {
     bottom: 20px;
     left: 20px;
     z-index: 1;
-    
+
     @include desktop {
         min-width: 400px;
     }
@@ -64,7 +64,7 @@ a {
         display: flex;
         align-items: center;
         box-sizing: border-box;
-        box-shadow: 0 0 10px $shadow;
+        box-shadow: 0 0 10px #000;
         cursor: pointer;
 
         &--focus {
@@ -127,7 +127,7 @@ a {
         display: block;
         text-align: center;
         padding: 7px 15px;
-        text-shadow: 0 0 5px $shadow;
+        text-shadow: 0 0 5px #000;
         margin: 5px 2px;
         background: #0b4a77;
         border: 1px solid #1c5b88;
@@ -172,8 +172,8 @@ a {
     text-align: center;
     text-transform: uppercase;
     margin: 35px 0;
-    box-shadow: 0 0 15px $shadow;
-    text-shadow: 0 0 5px $shadow;
+    box-shadow: 0 0 15px #000;
+    text-shadow: 0 0 5px #000;
     font-size: 20px;
     width: 100%;
     box-sizing: border-box;
@@ -214,7 +214,7 @@ a {
     &__input {
         width: 100%;
         background: #131313;
-        border: 1px solid $borderMain;
+        border: 1px solid $mainBorderColor;
         color: #aaa;
         padding: 10px;
         font: 14px 'Lato', sans-serif;
@@ -225,7 +225,7 @@ a {
         display: block;
 
         &:focus {
-            background: $borderMain;
+            background: $mainBorderColor;
         }
 
         &--vertical {
@@ -238,7 +238,7 @@ a {
 
         &--textarea {
             border: none;
-            border-top: 5px solid $borderMain;
+            border-top: 5px solid $mainBorderColor;
             height: 200px;
             word-wrap: break-word;
             line-height: 18px;
@@ -360,7 +360,7 @@ a {
 
     &__button {
         padding: 7px 10px;
-        text-shadow: 0 0 5px $shadow;
+        text-shadow: 0 0 5px #000;
         display: inline-block;
         margin: 5px 2px;
         background: #0b4a77;
@@ -472,7 +472,7 @@ a {
     display: inline-block;
     text-align: center;
     padding: 7px 15px;
-    text-shadow: 0 0 5px $shadow;
+    text-shadow: 0 0 5px #000;
     margin: 5px 2px;
     background: #0b4a77;
     border: 1px solid #1c5b88;
@@ -514,7 +514,7 @@ a {
 .bbcode {
     display: flex;
     flex-wrap: wrap;
-    
+
     @include mobile {
         width: 100%;
     }
@@ -567,7 +567,7 @@ a {
         padding: 6px 10px;
         transition: background 0.5s, color 0.5s;
     }
-    
+
     &__button:hover {
         background: #063252;
         color: #fff;
@@ -601,14 +601,14 @@ a {
 .user-status {
     width: 15px;
     height: 15px;
-    box-shadow: inset 0 0 5px $shadow;
+    box-shadow: inset 0 0 5px #000;
     margin: 0 5px 0 0;
 
     &--online {
-        background: $online;
+        background: $onlineColor;
     }
 
     &--offline {
-        background: $offline;
+        background: $offlineColor;
     }
 }
