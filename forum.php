@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="style/forum.css">
 </head>
 <body>
-<?php 
+<?php
 require_once('core/init.php');
 
 
@@ -47,7 +47,7 @@ $user_data = $user->data();
 			echo '<h2 class="news-panel__title news-panel__title--news">'.$news_data['topic_name'].'</h2>';
 		echo '</a>';
 	}
-	
+
 	$update_data = $news->updates(6);
 	if($update_data) {
 		echo '<div class="news-panel__right">';
@@ -190,7 +190,7 @@ if($user->isLoggedIn()) {
 					<a class="toplists__link" href="http://anime.toplista.pl/?we=Katsuro"><img src="http://sklep.boo.pl/banner.jpg"></a>
 					<a class="toplists__link" href="http://animetop.topka.pl/?we=Katsuro"><img src="http://i.imgur.com/aKf9ATw.jpg"></a>
 					<a class="toplists__link" href="http://naruto-zone.topka.pl/?we=Katsuro"><img src="http://ws2ws.info/n-z/button.jpg"></a>
-					<a class="toplists__link" href="http://anime-manga.top-100.pl/?we=Katsuro"><img src="http://ws2ws.info/top/topbut.gif"></a> 
+					<a class="toplists__link" href="http://anime-manga.top-100.pl/?we=Katsuro"><img src="http://ws2ws.info/top/topbut.gif"></a>
 					<a class="toplists__link" href="http://pon.topka.pl/?we=Katsuro"><img src="http://i.imgur.com/QI5OGsK.png"></a>
 					<a class="toplists__link" href="http://naruto-world-cup.top-100.pl/?we=Katsuro"><img src="http://i44.servimg.com/u/f44/11/94/32/26/utto10.png"></a>
 				</div>
@@ -201,7 +201,7 @@ if($user->isLoggedIn()) {
 			<h2 class="left-border-heading">Zaprzyjaźnione serwisy</h2>
 			<div class ="footer__description">Chcesz umieścić swoją reklamę graficzną na naszej stronie? Jesteś zainteresowany innymi formami współpracy? Jesteśmy otwarci na wszelkie propozycje! :) Zajrzyj <a href="">tutaj</a> i dowiedz się szczegółów.</div>
 			<div class="exchange">
-				<a class="exchange__link" href="http://ero-senin.pl/index.php"><img src="http://ero-senin.pl/uploads/wymiana/88x31/Ero-Senin-3.png" alt=Ero Senin" title="Ero-Senin - Skanlacje mang hentai"></a>
+				<a class="exchange__link" href="http://ero-senin.pl/index.php"><img src="http://ero-senin.pl/uploads/wymiana/88x31/Ero-Senin-3.png" alt="Ero Senin" title="Ero-Senin - Skanlacje mang hentai"></a>
 				<a class="exchange__link" href="http://www.pokemoncrystal.jun.pl" target="_blank"><img src="http://i49.tinypic.com/2939ht3.png" border="0"></a>
 				<a class="exchange__link" href="http://neomelodramatic.cba.pl/"><img src="http://i261.photobucket.com/albums/ii57/wisnia-szatana/neo/do/nmdt-baner_02.png"></a>
 				<a class="exchange__link" href="http://opadventure.cba.pl/" target="_blank"><img src="http://i1281.photobucket.com/albums/a515/qulob2/Obrazeczki%20do%20klikania/Button.png" alt="One Piece Adventure PBF/RPG"/></a>
@@ -236,7 +236,7 @@ if($user->isLoggedIn()) {
 				} else {
 					echo '<p class="users-online__item users-online__item--nouser">Żaden użytkownik nie przegląda forum w tej chwili.</p>';
 				}
-				
+
 				?>
 			</div>
 		</div>
