@@ -32,9 +32,6 @@ if($user->isLoggedIn()) {
 <head>
 	<title><?php echo $section_data->section_name ?></title>
 	<?php require_once('head.inc'); ?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/viewsection.css">
 </head>
 <body>
 
@@ -159,7 +156,7 @@ if($user->isLoggedIn()) {
 			?>
 		</div>
 	</div>
-	
+
 	<div class="viewsection-main">
 	<?php
 		if(isset($pagination)) {

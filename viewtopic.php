@@ -45,9 +45,6 @@ $total_pages = $posts->totalPages();
 <head>
 	<title><?php echo $topic_data->topic_name ?></title>
 	<?php require_once('head.inc'); ?>
-
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/viewtopic.css">
 </head>
 <body>
 
@@ -117,7 +114,7 @@ echo '</div>';
 			if($user->isLoggedIn() || $user->hasPermission('root')) {
 				echo '<a class="button" href="post.php?id='.$topic_data->topic_id.'">Odpowiedz</a>';
 			}
-			
+
 			$section = new Section($topic_data->topic_section);
 			?>
 			<a class="button button--last-in-row" href="viewsection.php?id=<?php echo $topic_data->topic_section ?>">Powrót do <?php echo $section->data()->section_name ?></a>

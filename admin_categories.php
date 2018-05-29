@@ -75,9 +75,6 @@ if(Input::exists('post', 'update_categories')) {
 <head>
 	<title>Kategorie</title>
 	<?php require_once('head.inc'); ?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/admin_panel.css">
 </head>
 <body>
 
@@ -128,7 +125,7 @@ if(Input::exists('get', 'add_category')) {
 		echo '<input type="submit" name="submit_add_category" value="Dodaj nowa kategorię" class="form__button form__button--center">';
 		echo '<a href="javascript:history.go(-1)" class="form__button form__button--center">Powrót</a>';
 	echo '</form>';
-} 
+}
 else {
 	echo '<h2 class="left-border-heading">Kategorie</h2>';
 

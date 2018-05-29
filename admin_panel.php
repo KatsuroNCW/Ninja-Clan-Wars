@@ -16,9 +16,6 @@ if(!$user->isLoggedIn() || !$user->hasPermission('root')) {
 <head>
 	<title>Panel administratora</title>
 	<?php require_once('head.inc'); ?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/admin_panel.css">
 </head>
 <body>
 

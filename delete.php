@@ -59,10 +59,6 @@ if(Input::exists('post', "submit_delete_post")) {
 	}
 	require_once('head.inc');
 	?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/viewtopic.css">
-	<link rel="stylesheet" type="text/css" href="style/post.css">
 </head>
 <body>
 
@@ -118,7 +114,7 @@ if(($topic_id = Input::get('tid')) && ($post_id = Input::get('id'))) {
 			} else {
 				echo '<div class="post-center">';
 			}
-				
+
 			echo '<div class="post-right__contents">'.$post_data->post_contents.'</div>';
 			if($post_data->post_hide != '') {
 				echo '<div class="post-right__contents post-right__contents--hide"><h2 class="post-right__contents--hide-header">Ukryta wiadomość:</h2>'.$post_data->post_hide.'</div>';

@@ -7,7 +7,7 @@ if(!$user->isLoggedIn()) {
 	Redirect::to(404);
 } else {
 	$user_data = $user->data();
-		
+
 }
 
 if(($topic_id = Input::get('tid')) && ($post_id = Input::get('id'))) {
@@ -171,10 +171,6 @@ if(Input::exists('post', "submit_move_topic")) {
 <head>
 	<title>Edycja posta</title>
 	<?php require_once('head.inc'); ?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/viewtopic.css">
-	<link rel="stylesheet" type="text/css" href="style/post.css">
 </head>
 <body>
 
@@ -211,7 +207,7 @@ if(Input::exists('post', "submit_preview")) {
 			} else {
 				echo '<div class="post__center">';
 			}
-				
+
 				echo '<div class="post__contents">'.BbcodeParser::get(Input::get('post_contents')).'</div>';
 				if(Input::get('post_hide') != '') {
 					echo '<div class="post__contents post__contents--hide"><h2 class="hide-header">Ukryta wiadomość:</h2>'.BbcodeParser::get(Input::get('post_hide')).'</div>';

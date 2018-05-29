@@ -3,13 +3,10 @@
 <head>
 	<title>Materiały promocyjne</title>
 	<?php require_once('head.inc'); ?>
-
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/promotion.css">
 </head>
 <body>
 <div id="fb-root"></div>
-<?php 
+<?php
 require_once('core/init.php');
 
 $user = new User();

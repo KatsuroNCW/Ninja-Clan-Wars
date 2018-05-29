@@ -47,7 +47,7 @@ if(Input::exists('post', "submit_topic")) {
 			$post_type = 0;
 		}
 		$user_total_posts = intval($user_data->user_total_posts) + 1;
-		
+
 		try {
 			$topic = new Topic();
 			$topic->create(array(
@@ -57,7 +57,7 @@ if(Input::exists('post', "submit_topic")) {
 			));
 
 			$last_topic = $section->lastTopic($section_id);
-			
+
 			$post->create(array(
 				'post_topic' => $last_topic->topic_id,
 				'post_section' => $section_id,
@@ -91,10 +91,6 @@ if(Input::exists('post', "submit_topic")) {
 <head>
 	<title>Tworzenie teamtu</title>
 	<?php require_once('head.inc'); ?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/viewtopic.css">
-	<link rel="stylesheet" type="text/css" href="style/post.css">
 </head>
 <body>
 
@@ -111,7 +107,7 @@ if(Input::exists('post', "submit_topic")) {
 </nav>
 
 
-	
+
 <?php
 if(Input::exists('post', "submit_preview")) {
 	echo '<section class="post-preview wrapper">';
@@ -131,7 +127,7 @@ if(Input::exists('post', "submit_preview")) {
 			} else {
 				echo '<div class="post__center">';
 			}
-				
+
 				echo '<div class="post__contents">'.BbcodeParser::get(Input::get('post_contents')).'</div>';
 				if(Input::get('post_hide') != '') {
 					echo '<div class="post__contents post__contents--hide"><h2 class="hide-header">Ukryta wiadomość:</h2>'.BbcodeParser::get(Input::get('post_hide')).'</div>';
@@ -171,7 +167,7 @@ if(Input::exists('post', "submit_preview")) {
 			<?php include('bbcode-panel.php'); ?>
 			<textarea class="form__input form__input--textarea" name="post_hide" placeholder="Ukryta wiadomość"><?php echo HtmlParser::get(Input::get('post_hide')); ?></textarea>
 		</div>
-		
+
 		<?php
 			if($user->hasPermission('root')) {
 				echo '<label class="form__button form__button--first"><input type="checkbox" name="post_type" class="form__button-checkbox" value="1"> Włącz tryb mechaniki</label>';

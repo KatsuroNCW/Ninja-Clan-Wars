@@ -41,7 +41,7 @@ if(Input::exists('post', 'submit_add_decoration')) {
 				'dec_name' => Input::get('dec_name'),
 				'dec_description' => Input::get('dec_description')
 			));
-			
+
 			move_uploaded_file($_FILES['decoration_img']['tmp_name'], 'style/img/decorations/'.$decoration->lastDecoration()->dec_id.'.'.substr($_FILES['decoration_img']['type'], 6));
 
 			Session::flash('admin_decorations', 'Pomyślnie dodano nowe odznaczenie!');
@@ -80,7 +80,7 @@ if(Input::exists('post', 'submit_update_decoration')) {
 				'dec_name' => Input::get('dec_name'),
 				'dec_description' => Input::get('dec_description')
 			));
-			
+
 			move_uploaded_file($_FILES['decoration_img']['tmp_name'], 'style/img/decorations/'.Input::get('dec_edit').'.'.substr($_FILES['decoration_img']['type'], 6));
 
 			Session::flash('admin_decorations', 'Pomyślnie edytowano nowe odznaczenie!');
@@ -107,9 +107,6 @@ if(Input::exists('get', 'submit_delete_decoration')) {
 <head>
 	<title>Odznaczenia</title>
 	<?php require_once('head.inc'); ?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/admin_panel.css">
 </head>
 <body>
 

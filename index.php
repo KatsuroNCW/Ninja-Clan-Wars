@@ -3,12 +3,9 @@
 <head>
 	<title>Ninja Clan Wars</title>
 	<?php require_once('head.inc'); ?>
-
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/index.css">
 </head>
 <body>
-<?php 
+<?php
 require_once('core/init.php');
 
 echo '<div class="info-box">';

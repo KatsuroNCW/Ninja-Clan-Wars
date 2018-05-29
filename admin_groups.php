@@ -105,9 +105,6 @@ if(Input::exists('post', 'submit_add_permission')) {
 <head>
 	<title>Grupy i uprawnienia</title>
 	<?php require_once('head.inc'); ?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/admin_panel.css">
 </head>
 <body>
 
@@ -170,7 +167,7 @@ if(Input::exists('get', 'add_group')) {
 		echo '<input type="submit" name="submit_add_group" value="Dodaj nowa grupe" class="form__button form__button--center">';
 		echo '<a href="javascript:history.go(-1)" class="form__button form__button--center">Powrót</a>';
 	echo '</form>';
-} 
+}
 elseif (Input::exists('get', 'update_group')) {
 	$group_data = $group->getGroup(Input::get('user_group'));
 	echo '<h2 class="left-border-heading">Aktualizacja grupy</h2>';
@@ -194,7 +191,7 @@ elseif (Input::exists('get', 'update_group')) {
 		echo '<input type="submit" name="submit_update_group" value="Aktualizuj grupę" class="form__button form__button--center">';
 		echo '<a href="javascript:history.go(-1)" class="form__button form__button--center">Powrót</a>';
 	echo '</form>';
-} 
+}
 elseif (Input::exists('get', 'add_new_permission')) {
 	echo '<h2 class="left-border-heading">Dodaj nowe uprawnienie</h2>';
 	echo '<form method="post" class="form">';

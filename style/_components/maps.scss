@@ -1,38 +1,3 @@
-/* ZMIENNE */
-$background_color_1: #131313;
-$background_color_2: #1f1e1e;
-$background_color_3: #063252;
-$background_color_4: #0b4a77;
-
-$border_color_1: #1f1f1f;
-$border_color_2: #1c5b88;
-
-
-/* MIXINY */
-@mixin mobile {
-	@media (max-width: 480px) {
-		@content;
-	}
-}
-
-@mixin tablet {
-	@media (min-width: 481px) and (max-width: 1023px) {
-		@content;
-	}
-}
-
-@mixin desktop {
-	@media (min-width: 1024px) {
-		@content;
-	}
-}
-
-@mixin mobileTablet {
-    @media (max-width: 1023px) {
-        @content;
-    }
-}
-
 .map {
 	@include mobile {
         width: 100%;

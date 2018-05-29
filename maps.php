@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once('core/init.php');
 
 $user = new User();
@@ -10,9 +10,6 @@ $user_data = $user->data();
 <head>
 	<title>Mapy świata</title>
 	<?php require_once('head.inc'); ?>
-
-	<link rel="stylesheet" type="text/css" href="style/maps.css">
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
 	<link rel="stylesheet" type="text/css" href="style/tooltipster/tooltipster.bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="style/tooltipster/tooltipster-sideTip-borderless.min.css" />
 	<script type="text/javascript" src="js/maps.js"></script>
@@ -71,7 +68,6 @@ $user_data = $user->data();
 	</main>
 
 	<?php @require_once('footer_main.inc') ?>
-	
+
 </body>
 </html>
-

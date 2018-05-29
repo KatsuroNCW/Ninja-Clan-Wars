@@ -3,10 +3,6 @@
 <head>
 	<title>Kontakt</title>
 	<?php require_once('head.inc'); ?>
-
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/contact.css">
-
 	<script>
 	(function() {
 	    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.id = 'gg-widget-script';
@@ -26,7 +22,7 @@
 </head>
 <body>
 <div id="fb-root"></div>
-<?php 
+<?php
 require_once('core/init.php');
 
 $user = new User();

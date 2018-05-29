@@ -111,10 +111,6 @@ if(Input::exists('post', "submit_delete_draft")) {
 <head>
 	<title>Tworzenie posta</title>
 	<?php require_once('head.inc'); ?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/viewtopic.css">
-	<link rel="stylesheet" type="text/css" href="style/post.css">
 </head>
 <body>
 
@@ -129,7 +125,7 @@ if(Input::exists('post', "submit_delete_draft")) {
 		<li id="mobile-nav__menu" class="mobile-nav__item"><a href="javascript: void(0)" class="mobile-nav__menu--link"><i class="mobile-nav__menu--icon icon-menu"></i>Menu</a></li>
 	</ul>
 </nav>
-	
+
 <?php
 echo '<div class="info-box">';
 if(Session::exists('post')) {
@@ -155,7 +151,7 @@ if(Input::exists('post', "submit_preview")) {
 			} else {
 				echo '<div class="post-center">';
 			}
-				
+
 				echo '<div class="post-right__contents">'.BbcodeParser::get(Input::get('post_contents')).'</div>';
 				if(Input::get('post_hide') != '') {
 					echo '<div class="post-right__contents post-right__contents--hide"><h2 class="post-right__contents--hide-header">Ukryta wiadomość:</h2>'.BbcodeParser::get(Input::get('post_hide')).'</div>';
@@ -185,7 +181,7 @@ if(Input::exists('post', "submit_preview")) {
 			<?php include('bbcode-panel.php'); ?>
 			<textarea class="form__input form__input--textarea" name="post_contents" placeholder="Treść posta"><?php if($quote_post->exists()) { echo HtmlParser::get($post_quote); } if(Input::exists('post', "submit_load_draft")) { echo HtmlParser::get($user_data->user_draft); } else { echo HtmlParser::get(Input::get('post_contents')); } ?></textarea>
 		</div>
-		
+
 
 		<h3 class="form__heading">Ukryta wiadomość (opcjonalna)</h3>
 		<div class="textarea-panel">

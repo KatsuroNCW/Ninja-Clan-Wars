@@ -31,7 +31,7 @@ if(Input::exists('post', 'submit_login')) {
 				Redirect::to('forum.php');
 			}
 		}
-	} 
+	}
 }
 ?>
 
@@ -40,9 +40,6 @@ if(Input::exists('post', 'submit_login')) {
 <head>
 	<title>Logowanie</title>
 	<?php require_once('head.inc'); ?>
-
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/login.css">
 </head>
 <body>
 	<?php

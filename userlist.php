@@ -27,9 +27,6 @@ $total_pages = $user->totalPages();
 <head>
 	<title>Lista użytkowników</title>
 	<?php require_once('head.inc'); ?>
-
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/userlist.css">
 </head>
 <body>
 
@@ -54,7 +51,7 @@ $total_pages = $user->totalPages();
 				<h2 class="form__heading">Login</h2>
 				<input type="text" name="search_login" placeholder="Podaj login" value="<?php echo Input::get('search_login') ?>" class="form__input">
 			</div>
-			
+
 			<div class="userlists__box">
 				<h2 class="form__heading">Grupa</h2>
 				<select name="search_group" class="form__input form__input--select">

@@ -104,9 +104,6 @@ if(Input::exists('post', 'update_positions')) {
 <head>
 	<title>Działy</title>
 	<?php require_once('head.inc'); ?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/admin_panel.css">
 </head>
 <body>
 
@@ -231,7 +228,7 @@ if(Input::exists('get', 'add_section')) {
 				echo '<label class="form__label-box-label">kraj<input type="radio" name="section_type" value="land" class="form__label-box-radio"></label>';
 				echo '<label class="form__label-box-label">forum<input type="radio" name="section_type" value="forum" class="form__label-box-radio" checked></label>';
 			}
-			
+
 		echo '</div>';
 
 		echo '<h2 class="form__heading">Opis:</h2>';

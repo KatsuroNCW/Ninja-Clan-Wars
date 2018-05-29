@@ -78,10 +78,6 @@ if(Input::exists('post', "submit_register")) {
 <head>
 	<title>Rejestracja</title>
 	<?php require_once('head.inc'); ?>
-
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/login.css">
-
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<link rel="stylesheet" type="text/css" href="style/tooltipster/tooltipster.bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="style/tooltipster/tooltipster-sideTip-borderless.min.css" />

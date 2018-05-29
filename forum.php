@@ -3,13 +3,10 @@
 <head>
 	<title>Ninja Clan Wars</title>
 	<?php require_once('head.inc'); ?>
-
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
 </head>
 <body>
 <?php
 require_once('core/init.php');
-
 
 if(Session::exists('forum')) {
 	echo '<div class="info-box">';

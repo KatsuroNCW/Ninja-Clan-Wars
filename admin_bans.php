@@ -102,9 +102,6 @@ if(Input::exists('get', 'submit_delete_ban')) {
 <head>
 	<title>Bany</title>
 	<?php require_once('head.inc'); ?>
-	
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/admin_panel.css">
 </head>
 <body>
 

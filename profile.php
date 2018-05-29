@@ -246,12 +246,6 @@ if(Input::exists('post', 'submit_change_decorations')) {
 <head>
 	<title>Ninja Clan Wars</title>
 	<?php require_once('head.inc'); ?>
-
-	<link rel="stylesheet" type="text/css" href="style/style.css">
-	<link rel="stylesheet" type="text/css" href="style/profile.css">
-	<link rel="stylesheet" type="text/css" href="style/forum.css">
-	<link rel="stylesheet" type="text/css" href="style/post.css">
-	<link rel="stylesheet" type="text/css" href="style/viewtopic.css">
 </head>
 <body>
 
@@ -607,7 +601,7 @@ if(Input::exists('post', 'submit_change_decorations')) {
 				} else {
 					echo 'ten użytkownik nie napisał żadnego posta lub zostały one usunięte!';
 				}
-				
+
 
 				echo '<div class="pagination">';
 					if($total_pages != 0) {

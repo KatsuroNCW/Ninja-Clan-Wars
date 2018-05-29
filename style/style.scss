@@ -1,4 +1,17 @@
-@import "mixins";
+/* file to import  */
+@import "_components/mixins";
+@import "_components/admin_panel";
+@import "_components/contact";
+@import "_components/forum";
+@import "_components/index";
+@import "_components/login";
+@import "_components/maps";
+@import "_components/post";
+@import "_components/profile";
+@import "_components/promotion";
+@import "_components/userlist";
+@import "_components/viewsection";
+@import "_components/viewtopic";
 
 html, body {
     width: 100%;

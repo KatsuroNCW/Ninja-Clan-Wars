@@ -10,7 +10,7 @@
 
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="style/reset.css">
-<link rel="stylesheet" type="text/css" href="style/style.css">
+<link rel="stylesheet" type="text/css" href="style/style.min.css">
 <link rel="stylesheet" type="text/css" href="style/fontello.css">
 
 <!-- CSS FONTS -->
