@@ -1,0 +1,79 @@
+.bbcode {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px auto;
+    background: #0b4a77;
+    padding: 2px;
+
+    &__item {
+        display: block;
+        background: #1c5b88;
+        margin: 2px 1px;
+        padding: 0 10px;
+        line-height: 27px;
+        font-size: 14px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        transition: background 0.5s, color 0.5s;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    &__item:first-child {
+        margin: 3px 1px 3px 0;
+    }
+
+    &__item:hover {
+        background: #063252;
+        color: #fff;
+    }
+
+    &__input {
+        padding: 0;
+        display: block;
+        background: #0b4a77;
+        border: 1px solid #1c5b88;
+        margin: 1px;
+        line-height: 27px;
+        font-size: 14px;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    &__button {
+        border: none;
+        cursor: pointer;
+        background: #1c5b88;
+        color: #ddd;
+        padding: 6px 10px;
+        transition: background 0.5s, color 0.5s;
+        text-transform: uppercase;
+    }
+
+    &__button:hover {
+        background: #063252;
+        color: #fff;
+    }
+
+    &__colorpicker {
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: 28px;
+        height: 27px;
+        cursor: pointer;
+    }
+
+    &__colorpicker::-webkit-color-swatch-wrapper, &__colorpicker::-webkit-color-swatch {
+        padding: 0;
+        border: none;
+    }
+
+    &__font-size {
+        background: #1c5b88;
+        border: none;
+        color: #ddd;
+        text-align: center;
+        width: 40px;
+    }
+}

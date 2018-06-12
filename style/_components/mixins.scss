@@ -37,3 +37,13 @@ $grayBoxColor: #131313;
 $buttonBackgroundColor: #0b4a77;
 $buttonBackgroundColor-hover: #063252;
 $buttonBorderColor: #1c5b88;
+
+/* FONTS */
+
+@mixin mainFont() {
+	font-family: 'Barlow', sans-serif;
+}
+
+@mixin headingFont() {
+	font-family: 'Signika Negative', sans-serif;
+}

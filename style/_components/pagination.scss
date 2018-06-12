@@ -1,0 +1,42 @@
+.pagination {
+    display: flex;
+
+    &__link {
+        display: block;
+        text-align: center;
+        padding: 7px 15px;
+        text-shadow: 0 0 5px #000;
+        margin: 5px 2px;
+        background: #0b4a77;
+        border: 1px solid #1c5b88;
+        color: #ddd;
+        transition: background 0.5s, color 0.5s;
+        font-size: 15px;
+
+        @include mobile {
+            width: 50%;
+        }
+
+        &--active {
+            background: #063252;
+            pointer-events: none;
+        }
+
+        &--active:hover {
+            background: #0b4a77;
+        }
+    }
+
+    &__link:last-child {
+        margin: 5px 0 5px 2px;
+    }
+
+    &__link:first-child {
+        margin: 5px 2px 5px 0;
+    }
+
+    &__linklink:hover {
+        background: #063252;
+        color: #fff;
+    }
+}

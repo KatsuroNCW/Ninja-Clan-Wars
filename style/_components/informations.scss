@@ -1,0 +1,81 @@
+.info-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+
+    @include desktop {
+        width: 400px;
+    }
+
+    &__item {
+        color: #d2bcbb;
+        padding: 10px;
+        font-size: 14px;
+        margin: 2px 0;
+        display: flex;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px #000;
+        cursor: pointer;
+        position: relative;
+
+        &--error {
+            background: #2f0101;
+            border: 1px solid #880202;
+            border-left: 5px solid #880202;
+        }
+
+        &--confirmation {
+            background: #012906;
+            border: 1px solid #028000;
+            border-left: 5px solid #028000;
+        }
+    }
+
+    & > &__item--focus {
+        display: none;
+    }
+
+    &__icon {
+        font-size: 25px;
+        margin: 5px 10px 0 0;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        a {
+            display: contents;
+        }
+    }
+
+    &__ban {
+        background: #2f0101;
+        border: 1px solid #880202;
+        color: #d2bcbb;
+        font-size: 14px;
+        padding: 5px 10px;
+        margin: 10px 0;
+        cursor: pointer;
+
+        &-info {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        &-message {
+            margin: 10px 5px 0;
+        }
+    }
+}
+
+.information {
+    background: $grayBoxColor;
+    border: 1px solid $mainBorderColor;
+    border-left: 10px solid $mainBorderColor;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+}

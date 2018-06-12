@@ -1,0 +1,375 @@
+.kp-nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include desktop {
+        margin: 0 0 15px;
+    }
+
+    @include mobileTablet {
+        margin: 0 10px 15px;
+    }
+
+    &__item {
+        line-height: 40px;
+        text-transform: uppercase;
+        font-size: 15px;
+        margin: 0 1px;
+        flex-grow: 1;
+
+        &:first-child {
+            margin: 0 1px 0 0;
+        }
+
+        &:last-child {
+            margin: 0 0 0 1px;
+        }
+
+        a {
+            display: block;
+            background: $grayBoxColor;
+            padding: 0 10px;
+            text-align: center;
+            border-top: 5px solid $mainBorderColor;
+            transition: border 0.5s;
+
+            &:hover {
+                border-top: 5px solid $buttonBackgroundColor;
+            }
+        }
+
+        &--active {
+            a {
+                border-top: 5px solid $buttonBackgroundColor;
+            }
+        }
+    }
+}
+
+.kp {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include mobileTablet {
+        margin: 10px;
+    }
+
+    &__left {
+        background: $grayBoxColor;
+        width: 250px;
+        padding-bottom: 30px;
+        border: 1px solid $mainBorderColor;
+        height: 100%;
+
+        @include desktop {
+            max-width: 250px;
+        }
+
+        @include tablet {
+            margin: 10px 0;
+            flex-grow: 1;
+        }
+
+        @include mobile {
+            width: 100%;
+            margin: 0 0 10px;
+        }
+    }
+
+    &__right {
+        background: $grayBoxColor;
+        border: 1px solid $mainBorderColor;
+
+        @include desktop {
+            width: 730px;
+            min-width: 480px;
+        }
+
+        @include tablet {
+            width: 400px;
+            flex-grow: 10;
+            margin: 10px 0 10px 10px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__symbol {
+        margin: 0;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    &__avatar {
+        margin: 30px auto 0;
+        width: 185px;
+        box-shadow: 0 0 5px #000;
+        position: relative;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid $mainBorderColor;
+        }
+    }
+
+    &__info {
+        display: flex;
+        border: 1px solid #1f1f1f;
+        background: #0d0d0d;
+        margin: 5px 20px;
+        @include mainFont();
+
+        p:first-child {
+            width: 50px;
+            text-align: center;
+            border-right: 1px solid #1f1f1f;
+            line-height: 35px;
+            background: #0b4a77;
+            text-shadow: 0 0 10px #000;
+            @include headingFont();
+            font-size: 16px;
+        }
+
+        p:last-child {
+            line-height: 35px;
+            text-align: center;
+            padding: 0 15px;
+        }
+    }
+
+    &__user-status {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+
+        &--online {
+            background: darken($onlineColor, 20%);
+            border: 1px solid $onlineColor;
+        }
+
+        &--offline {
+            background: darken($offlineColor, 10%);
+            border: 1px solid $offlineColor;
+        }
+    }
+
+    &__heading {
+        margin: 30px;
+        border-left: 5px solid $buttonBackgroundColor;
+        padding: 3px 10px 0;
+    }
+
+    &__mini-heading {
+        background: $buttonBackgroundColor;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        @include headingFont();
+        font-size: 16px;
+        text-shadow: 0 0 10px #000;
+    }
+
+    &__name {
+        @include mainFont();
+        font-size: 35px;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px #000;
+        font-weight: 600;
+        line-height: 30px;
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+    &__title {
+        position: relative;
+        top: -1px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 30px 30px;
+        @include mainFont();
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 5px;
+
+        p:first-child {
+            text-align: right;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 5px 0 0;
+            font-size: 20px;
+        }
+    }
+
+    &__prolog {
+        background: $mainBackgroundColor;
+        border: 1px solid $mainBorderColor;
+        padding: 15px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.kp-descriptions {
+    border: 1px solid $mainBorderColor;
+
+    @include desktop {
+        margin: 40px 30px;
+    }
+
+    @include mobile {
+        margin: 40px 10px;
+    }
+
+    &__nav {
+        display: flex;
+
+        &-item {
+            background: $buttonBackgroundColor;
+            line-height: 40px;
+            padding: 0 15px;
+            text-transform: uppercase;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.5s;
+            border-right: 1px solid lighten($buttonBackgroundColor, 10%);
+            box-shadow: 0px 5px 0px 0px $mainBorderColor;
+            z-index: 10;
+            text-align: center;
+            flex-grow: 1;
+            @include headingFont();
+
+            &:last-child {
+                border-right: none;
+            }
+
+            &:hover {
+                background: darken($buttonBackgroundColor, 10%);
+            }
+
+            &--active {
+                background: darken($buttonBackgroundColor, 10%);
+                box-shadow: 0px 5px 0px 0px $buttonBackgroundColor;
+                z-index: 10;
+            }
+        }
+    }
+
+    &__item {
+        background: $mainBackgroundColor;
+        display: block;
+        padding: 15px;
+        font-size: 16px;
+        line-height: 22px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+
+.summary {
+
+    &__nav {
+        display: flex;
+        margin: 0 10px;
+
+        &-item {
+            background: $buttonBackgroundColor;
+            line-height: 40px;
+            padding: 0 15px;
+            text-transform: uppercase;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.5s;
+            border-right: 1px solid lighten($buttonBackgroundColor, 10%);
+            box-shadow: 0px 5px 0px 0px $mainBorderColor;
+            z-index: 10;
+            text-align: center;
+            flex-grow: 1;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            &:hover {
+                background: darken($buttonBackgroundColor, 10%);
+            }
+
+            &--active {
+                background: darken($buttonBackgroundColor, 10%);
+                box-shadow: 0px 5px 0px 0px $buttonBackgroundColor;
+                z-index: 10;
+            }
+        }
+    }
+
+    &__box {
+        @include mainFont();
+        margin: 0 10px;
+        background: $mainBackgroundColor;
+        padding: 20px 0 10px;
+        border: 1px solid $mainBorderColor;
+        max-height: 450px;
+    }
+
+    &__heading {
+        background: $buttonBackgroundColor;
+        text-transform: uppercase;
+        padding: 10px;
+        margin: 0 0 10px;
+        @include headingFont();
+        font-size: 15px;
+        text-shadow: 0 0 10px #000;
+    }
+
+    &__item {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        margin: 0 0 5px;
+        padding: 8px;
+        font-size: 13px;
+
+        &--plus {
+            border-color: $onlineColor;
+            background: darken($onlineColor, 20%);
+        }
+
+        &--minus {
+            border-color: $offlineColor;
+            background: darken($offlineColor, 10%);
+        }
+    }
+
+    &__total {
+        margin: 0 20px 20px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        span {
+            font-size: 25px;
+            margin: 0 0 0 10px;
+        }
+    }
+}

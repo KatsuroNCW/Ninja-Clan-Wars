@@ -1,0 +1,148 @@
+.news-panel {
+    display: flex;
+    margin: 30px auto 15px;
+
+    @include mobile {
+        flex-direction: column;
+    }
+    @include tablet {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @include desktop {
+        flex-wrap: wrap;
+    }
+
+    &__left {
+        border: 1px solid #1f1f1f;
+        border-top: 5px solid #1f1f1f;
+        box-sizing: border-box;
+        position: relative;
+        transition: border 0.5s;
+        width: 400px;
+        max-width: 600px;
+        height: 300px;
+
+        @include mobile {
+            flex-grow: 1;
+            margin: 0 0 10px 0;
+            width: 100%;
+        }
+        @include tablet {
+            flex-grow: 2;
+            margin: 10px 0 0;
+        }
+        @include desktop {
+            flex-grow: 2;
+            margin: 0 10px 0 0;
+        }
+
+        &:before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(img/news-shadow-big.png) repeat-x left bottom;
+            opacity: .8;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            border-top: 5px solid #0b4a77;
+
+            &:before {
+                background-color: #000;
+                opacity: .6;
+            }
+        }
+    }
+
+    &__right {
+        width: 400px;
+        max-width: 400px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include mobile {
+            width: 100%;
+            min-height: 300px;
+            margin: 0 auto;
+        }
+        @include tablet {
+            margin: 10px 0 0;
+            min-height: 300px;
+        }
+    }
+
+    &__box {
+        border: 1px solid #1f1f1f;
+        border-top: 5px solid #1f1f1f;
+        height: 145px;
+        box-sizing: border-box;
+        position: relative;
+        transition: border 0.5s;
+
+        &:before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(img/news-shadow-small.png) repeat-x left bottom;
+            opacity: .8;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+            border-top: 5px solid #0b4a77;
+
+            &:before {
+                background-color: #000;
+                opacity: .6;
+            }
+        }
+    }
+
+    &__info {
+        position: absolute;
+        top: 5%;
+        right: 0;
+        display: flex;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 23px;
+
+        &-author {
+            background: #0b4a77;
+            padding: 0 10px;
+        }
+
+        &-date {
+            background: #063252;
+            padding: 0 10px;
+        }
+    }
+
+    &__title {
+        border-left: 5px solid #0b4a77;
+        padding: 5px 5px 5px 10px;
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+
+        &--news {
+            font-size: 22px;
+            margin: 15px;
+        }
+
+        &--update {
+            font-size: 15px;
+            margin: 10px;
+        }
+    }
+}

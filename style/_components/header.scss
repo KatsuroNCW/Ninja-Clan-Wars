@@ -1,0 +1,95 @@
+.header {
+    @include mobile {
+        width: 100%;
+    }
+    @include tablet {
+        width: 100%;
+    }
+    @include desktop {
+        width: 1000px;
+        margin: 0 auto 20px;
+    }
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    &__logotype {
+        @include mobileTablet {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        @include desktop {
+            width: 500px;
+            height: 100px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.header-user-info {
+    @include mobileTablet {
+        display: none;
+    }
+    @include desktop {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        display: flex;
+        padding: 10px 15px;
+        background: #0b4a77;
+        border: 1px solid #1c5b88;
+        margin: 15px 5px;
+        text-transform: uppercase;
+        align-items: center;
+        transition: background 0.5s, color 0.5s;
+        font-size: 15px;
+
+        &:last-child {
+            margin: 15px 0 15px 5px;
+        }
+
+        &:hover {
+            background: #063252;
+            color: #fff;
+        }
+    }
+
+    &__icon {
+        font-size: 22px;
+    }
+
+    &__login {
+        background: #0b4a77;
+        border: 1px solid #1c5b88;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        transition: background 0.5s, color 0.5s;
+
+        img {
+            width: 60px;
+            height: 60px;
+            margin: 0 10px 0 0;
+        }
+
+        &:hover {
+            background: #063252;
+            color: #fff;
+        }
+    }
+}
