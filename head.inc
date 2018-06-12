@@ -8,16 +8,17 @@
 <meta property="og:description" content="Ninja Clan Wars - przeglądarkowa gra Naruto play by forum!">
 <meta property="og:image" content="style/img/logo.png">
 
-<!-- CSS -->
-<link rel="stylesheet" type="text/css" href="style/reset.css">
-<link rel="stylesheet" type="text/css" href="style/style.min.css">
-<link rel="stylesheet" type="text/css" href="style/fontello.css">
-
 <!-- CSS FONTS -->
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Signika+Negative"> <!-- czcionka główna -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext"> <!-- czcionka do działów krain -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Bangers&subset=latin,latin-ext"> <!-- czcionka do kafelek -->
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"> <!-- czcionka do postów -->
+<link href="https://fonts.googleapis.com/css?family=Barlow:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style/reset.css">
+<link rel="stylesheet" type="text/css" href="style/style.min.css">
+<link rel="stylesheet" type="text/css" href="style/fontello.css">
 
 <!-- JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -25,6 +26,7 @@
 <script defer src="js/animations.js"></script>
 <script defer src="js/bbcodeMenuV2.js"></script>
 <script defer src="js/jquery.sticky.js"></script>
+<script defer src="js/pageUp.js"></script>
 
 <script>
   $(document).ready(function(){
