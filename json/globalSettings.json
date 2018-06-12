@@ -1,0 +1,6 @@
+{
+	"gender": ["nie określono", "mężczyzna", "kobieta"],
+	"clans": ["Uchiha", "Senju", "Nara", "Kiyoshi", "Namikaze", "Sabaku", "Ayatsuri", "Hyūga", "Yuki", "Inuzuka", "Kaguya", "Akimichi", "Aburame", "Futago", "Kuran Sen", "Kakukoro"],
+	"organizations": ["Wyrzutki", "Samotnicy"],
+	"kp_status": ["active", "inactive", "new"]
+}

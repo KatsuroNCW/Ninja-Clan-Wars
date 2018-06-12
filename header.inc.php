@@ -7,7 +7,7 @@
 				echo '<a href="login.php" class="header-user-info__link"><i class="header-user-info__icon icon-login"></i> Zaloguj</a>';
 				echo '<a href="register.php" class="header-user-info__link"><i class="header-user-info__icon icon-user-add"></i> Zarejestruj</a>';
 			} else {
-				echo '<a href="profile.php?id='.$user_data->user_login.'" class="header-user-info__login"><img src="'.imageType('style/img/clan_symbols/senju').'"> '.$user_data->user_login.'</a>';
+				echo '<a href="kp.php" class="header-user-info__login"><img src="'.imageType('style/img/clan_symbols/senju').'"> '.$user_data->user_login.'</a>';
 			}
 			?>
 		</div>
@@ -24,12 +24,13 @@
 			}
 		?>
 		</div>
-		
+
 		<ul class="menu">
 			<li class="menu__item"><a href="index.php">Portal</a></li>
 			<li class="menu__item"><a href="forum.php">Forum</a></li>
 			<li class="menu__item has-submenu"><a href="#">Baza opisów <span class="menu__item-arrow"></span></a>
 				<ul class="submenu">
+					<li class="submenu__item"><a href="maps.php">Mapy świata</a></li>
 					<li class="submenu__item"><a href="#">Profesje</a></li>
 					<li class="submenu__item"><a href="#">Style walki</a></li>
 					<li class="submenu__item"><a href="#">Żywioły chakry</a></li>
@@ -41,7 +42,7 @@
 					<li class="submenu__item"><a href="#">Summony</a></li>
 				</ul>
 			</li>
-			<li class="menu__item"><a href="maps.php">Mapy świata</a></li>
+			<li class="menu__item"><a href="kplist.php">Karty postaci</a></li>
 			<li class="menu__item has-submenu"><a href="#">Opcje forum <span class="menu__item-arrow"></span></a>
 				<ul class="submenu">
 					<li class="submenu__item"><a href="userlist.php">Lista użytkowników</a></li>
@@ -66,4 +67,6 @@
 	</nav>
 </header>
 
-<div class="page-up" title="Przewiń do góry"><i class="icon-up-open"></i></div>
+<div class="page-up" title="Przewiń do góry">
+	<i class="page-up__icon icon-up-open"></i>
+</div>

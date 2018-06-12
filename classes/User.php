@@ -132,11 +132,12 @@ class User {
 				$group = $this->_db->get('users_groups', array('group_id', '=', $group_id));
 				if($group->count()) {
 					$permissions = json_decode($group->first()->group_permissions, true);
-					if(isset($permissions[$key])) {
+					if(intval($permissions[$key]) === 1) {
 						return true;
 					}
 				}
 			}
+			return false;
 		}
 		return false;
 	}
@@ -147,7 +148,7 @@ class User {
 		} else {
 			$list_of_groups = $this->_db->get('users', array('user_login', '=', $user_id))->first()->user_group;
 		}
-		
+
 		$list_of_groups = explode(', ', $list_of_groups);
 		foreach ($list_of_groups as $group_id) {
 			$user_groups[$this->_db->get('users_groups', array('group_id', '=', $group_id))->first()->group_name] = $this->_db->get('users_groups', array('group_id', '=', $group_id))->first()->group_color;
@@ -226,7 +227,7 @@ class User {
 		} else {
 			$login = '%'.$login.'%';
 		}
-		
+
 		if($sql) {
 			$total_records = $sql->count();
 			$total_pages = ceil($total_records / $user_sets);
@@ -258,5 +259,22 @@ class User {
 
 	public function isOnline($user_login) {
 		return ($this->_db->get('users_online', array('login', '=', $user_login))->count() != 0) ? true : false;
+	}
+
+	public function hasKp() {
+        return (empty($this->_db->get('kp', array('kp_user_id', '=', $this->_data->user_id))->results())) ? false : true;
+	}
+
+	public function getKpId() {
+		$sql = $this->_db->get('kp', array('kp_user_id', '=', $this->_data->user_id))->results();
+		$kp_list = array();
+		foreach ($sql as $kp) {
+			foreach ($kp as $kp_key => $kp_value) {
+				if($kp_key === 'kp_id') {
+					array_push($kp_list, $kp_value);
+				}
+			}
+		}
+		return $kp_list;
 	}
 }

@@ -8,7 +8,7 @@ class Group {
 				'root' => array(
 					'Administrator forum' => 0
 				),
-				'moderator' => array(
+				'mod' => array(
 					'Moderator forum' => 0
 				),
 				'player' => array(

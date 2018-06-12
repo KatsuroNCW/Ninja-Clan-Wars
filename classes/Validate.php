@@ -64,6 +64,12 @@ class Validate {
 							}
 							break;
 
+						case 'numbers_only':
+							if(preg_match('/^[0-9\s]+$/D', $source[$item]) == false) {
+								$this->addError(ucfirst($name." może by tylko liczbą!"));
+							}
+							break;
+
 						case 'letter_and_polish_only':
 							if(preg_match('/^[a-z|A-z|ą|ę|ś|ó|ź|ż|ć|ń|ł|Ą|Ę|Ś|Ó|Ź|Ż|Ć|Ń|Ł|\s]+$/D', $source[$item]) == false) {
 								$this->addError(ucfirst($name." może składać się tylko z liter (dozwolona jest spacja oraz polskie znaki diakrytyczne, bez cyfr i znaków specjalnych)!"));
