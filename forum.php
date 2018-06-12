@@ -18,18 +18,11 @@ $user = new User();
 $user_data = $user->data();
 ?>
 
-<?php require_once('header.inc.php'); ?>
+<?php
+	require_once('header.inc.php');
+	require_once('mobile_menu.inc');
+?>
 
-<nav class="mobile-nav">
-	<ul class="mobile-nav__menu">
-		<li class="mobile-nav__item mobile-nav__item--switcher"><a href="#" class="mobile-nav__menu--link"><i class="mobile-nav__menu--icon icon-switch"></i>Switcher</a></li>
-		<li class="mobile-nav__item"><a href="maps.php" class="mobile-nav__menu--link"><i class="mobile-nav__menu--icon icon-globe"></i>Mapy</a></li>
-		<li class="mobile-nav__item"><a href="forum.php" class="mobile-nav__menu--link"><i class="mobile-nav__menu--icon icon-home"></i>Główna</a></li>
-		<li class="mobile-nav__item mobile-nav__item--menu"><a href="#" class="mobile-nav__menu--link"><i class="mobile-nav__menu--icon icon-menu"></i>Menu</a></li>
-	</ul>
-</nav>
-
-<div class="page-up" title="Przewiń do góry"><i class="icon-up-open"></i></div>
 
 <div class="news-panel wrapper">
 	<?php

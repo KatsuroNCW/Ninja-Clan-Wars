@@ -35,19 +35,10 @@ if($user->isLoggedIn()) {
 </head>
 <body>
 
-<?php require_once('header.inc.php'); ?>
-
-<nav class="mobile-nav">
-	<ul class="mobile-nav__menu">
-		<li id="mobile-nav__land-switcher" class="mobile-nav__item"><a href="maps.php" class="mobile-nav__menu--link"><i class="mobile-nav__menu--icon icon-globe"></i>Mapy</a></li>
-		<li id="mobile-nav__land-switcher" class="mobile-nav__item"><a href="forum.php" class="mobile-nav__menu--link"><i class="mobile-nav__menu--icon icon-home"></i>Główna</a></li>
-		<li id="mobile-nav__menu" class="mobile-nav__item"><a href="javascript: void(0)" class="mobile-nav__menu--link"><i class="mobile-nav__menu--icon icon-menu"></i>Menu</a></li>
-	</ul>
-</nav>
-
-<div class="page-up" title="Przewiń do góry"><i class="icon-up-open"></i></div>
-
 <?php
+	require_once('header.inc.php');
+	require_once('mobile_menu.inc');
+
 	$topics = new Topic();
 	if($topics->showFromSection($section_data->section_id, $page, $disp_topics)) {
 		$pagination = true;
