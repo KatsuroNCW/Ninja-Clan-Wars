@@ -29,33 +29,30 @@ $user_data = $user->data();
 	$news = new Topic();
 	$news_data = $news->lastTopic(1);
 	if($news_data) {
-		echo '<a href="viewtopic.php?id='.$news_data['topic_id'].'" class="news-panel__left" style="background: url('.imageType('style/img/topic/'.$news_data['topic_id']).') center;">';
-			echo '<div class="news-panel__info">';
-				echo '<p class="news-panel__info-author">'.$news_data['topic_by'].'</p>';
-				echo '<p class="news-panel__info-date">'.dateFormat($news_data['post_date']).'</p>';
-			echo '</div>';
-			echo '<h2 class="news-panel__title news-panel__title--news">'.$news_data['topic_name'].'</h2>';
-		echo '</a>';
+		echo '<article class="news" style="background: url('.imageType('style/img/topic/'.$news_data['topic_id']).') center;">';
+			echo '<a href="viewtopic.php?id='.$news_data['topic_id'].'" class="news__container">';
+				echo '<h2 class="news__title">'.$news_data['topic_name'].'</h2>';
+				echo '<div class="news__info">'.$news_data['topic_by'].': '.dateFormat($news_data['post_date']).'</div>';
+			echo '</a>';
+		echo '</article>';
 	}
 
 	$update_data = $news->updates(6);
 	if($update_data) {
-		echo '<div class="news-panel__right">';
 		$tmp = 2;
 		foreach ($update_data as $update) {
-			echo '<a href="viewtopic.php?id='.$update['topic_id'].'" class="news-panel__box" style="background: url('.imageType('style/img/topic/'.$update['topic_id']).') round;">';
-				echo '<div class="news-panel__info">';
-					echo '<p class="news-panel__info-author">'.$update['topic_by'].'</p>';
-					echo '<p class="news-panel__info-date">'.dateFormat($update['post_date']).'</p>';
-				echo '</div>';
-				echo '<h2 class="news-panel__title news-panel__title--update">'.$update['topic_name'].'</h2>';
-			echo '</a>';
+			echo '<article class="news" style="background: url('.imageType('style/img/topic/'.$update['topic_id']).') center;">';
+				echo '<a href="viewtopic.php?id='.$update['topic_id'].'" class="news__container">';
+					echo '<h2 class="news__title">'.$update['topic_name'].'</h2>';
+					echo '<div class="news__info">'.$update['topic_by'].': '.dateFormat($update['post_date']).'</div>';
+				echo '</a>';
+			echo '</article>';
 			$tmp++;
 		}
-		echo '</div>';
 	}
 	?>
 </div>
+<script src="js/slider.js"></script>
 
 <div class="land-switcher">
 	<h2 class="land-switcher__heading">Przemieszczaj się pomiędzy krajami</h2>
