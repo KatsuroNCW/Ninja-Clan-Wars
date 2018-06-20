@@ -29,24 +29,24 @@ $user_data = $user->data();
 	$news = new Topic();
 	$news_data = $news->lastTopic(1);
 	if($news_data) {
-		echo '<article class="news" style="background: url('.imageType('style/img/topic/'.$news_data['topic_id']).') center;">';
-			echo '<a href="viewtopic.php?id='.$news_data['topic_id'].'" class="news__container">';
+		echo '<a href="viewtopic.php?id='.$news_data['topic_id'].'" class="news" style="background: url('.imageType('style/img/topic/'.$news_data['topic_id']).') center;">';
+			echo '<div class="news__container">';
 				echo '<h2 class="news__title">'.$news_data['topic_name'].'</h2>';
 				echo '<div class="news__info">'.$news_data['topic_by'].': '.dateFormat($news_data['post_date']).'</div>';
-			echo '</a>';
-		echo '</article>';
+			echo '</div>';
+		echo '</a>';
 	}
 
 	$update_data = $news->updates(6);
 	if($update_data) {
 		$tmp = 2;
 		foreach ($update_data as $update) {
-			echo '<article class="news" style="background: url('.imageType('style/img/topic/'.$update['topic_id']).') center;">';
-				echo '<a href="viewtopic.php?id='.$update['topic_id'].'" class="news__container">';
+			echo '<a href="viewtopic.php?id='.$update['topic_id'].'" class="news" style="background: url('.imageType('style/img/topic/'.$update['topic_id']).') center;">';
+				echo '<div class="news__container">';
 					echo '<h2 class="news__title">'.$update['topic_name'].'</h2>';
 					echo '<div class="news__info">'.$update['topic_by'].': '.dateFormat($update['post_date']).'</div>';
-				echo '</a>';
-			echo '</article>';
+				echo '</div>';
+			echo '</a>';
 			$tmp++;
 		}
 	}

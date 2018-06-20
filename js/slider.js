@@ -48,11 +48,11 @@ class Slider {
         this.next.classList.add('slider__button--next');
         this.next.addEventListener('click', this.slideNext.bind(this));
 
-        const nav = document.createElement('div');
-        nav.classList.add('slider__nav');
-        nav.appendChild(this.prev);
-        nav.appendChild(this.next);
-        this.slider.appendChild(nav);
+        // const nav = document.createElement('div');
+        // nav.classList.add('slider__nav');
+        this.slider.appendChild(this.prev);
+        this.slider.appendChild(this.next);
+        // this.slider.appendChild(nav);
     }
     createSquares() {
         const squaresUl = document.createElement('ul');

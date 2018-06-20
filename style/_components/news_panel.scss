@@ -26,9 +26,21 @@
         font-size: 22px;
         padding: 0 15px;
         transition: background 0.5s;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        z-index: 1;
 
         &:hover {
             background: transparentize($mainFontColor, 0.7);
+        }
+
+        &--prev {
+            left: 0;
+        }
+
+        &--next {
+            right: 0;
         }
     }
 
@@ -38,6 +50,7 @@
         right: 0;
         display: flex;
         margin: 10px 50px;
+        z-index: 1;
     }
 
     &-square {
@@ -65,9 +78,11 @@
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s;
+    z-index: 0;
 
     &--active {
         opacity: 1;
+        z-index: 1;
 
         .news__container {
             bottom: 0;
@@ -79,6 +94,7 @@
 .news-panel {
     border: 1px solid $mainBorderColor;
     border-top: 5px solid $mainBorderColor;
+    box-sizing: border-box;
 }
 
 .news {
@@ -100,11 +116,27 @@
     }
 
     &__title {
-        font-size: 25px;
+        @include desktop {
+            font-size: 25px;
+        }
+        @include tablet {
+            font-size: 25px;
+        }
+        @include mobile {
+            font-size: 20px;
+        }
     }
 
     &__info {
         text-transform: uppercase;
-        font-size: 14px;
+        @include desktop {
+            font-size: 14px;
+        }
+        @include desktop {
+            font-size: 14px;
+        }
+        @include mobile {
+            font-size: 10px;
+        }
     }
 }
