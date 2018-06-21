@@ -39,20 +39,17 @@ class Slider {
         this.prev.innerText = "<";
         this.prev.classList.add('slider__button');
         this.prev.classList.add('slider__button--prev');
-        this.prev.addEventListener('click', this.slidePrev.bind(this));
+        this.prev.addEventListener('click', () => this.slidePrev());
 
         this.next = document.createElement('button');
         this.next.type = "button";
         this.next.innerText = ">";
         this.next.classList.add('slider__button');
         this.next.classList.add('slider__button--next');
-        this.next.addEventListener('click', this.slideNext.bind(this));
+        this.next.addEventListener('click', () => this.slideNext());
 
-        // const nav = document.createElement('div');
-        // nav.classList.add('slider__nav');
         this.slider.appendChild(this.prev);
         this.slider.appendChild(this.next);
-        // this.slider.appendChild(nav);
     }
     createSquares() {
         const squaresUl = document.createElement('ul');
@@ -62,10 +59,7 @@ class Slider {
             const squareLi = document.createElement('li');
             squareLi.classList.add('slider-square');
 
-            squareLi.addEventListener('click', function() {
-                this.changeSlide(i);
-            }.bind(this));
-
+            squareLi.addEventListener('click', () => this.changeSlide(i));
             squaresUl.appendChild(squareLi);
             this.squares.push(squareLi);
         }
@@ -87,13 +81,9 @@ class Slider {
         this.changeSlide(this.currentSlide);
     }
     changeSlide(index) {
-        [].forEach.call(this.slides, function(slide) {
-            slide.classList.remove('slide--active');
-        });
+        [].forEach.call(this.slides, slide => slide.classList.remove('slide--active'));
 
-        this.squares.forEach(function(square) {
-            square.classList.remove('slider-square--active');
-        });
+        this.squares.forEach(square => square.classList.remove('slider-square--active'));
 
         this.slides[index].classList.add('slide--active');
         this.squares[index].classList.add('slider-square--active');
@@ -101,9 +91,7 @@ class Slider {
         this.currentSlide = index;
 
         clearInterval(this.time);
-        this.time = setTimeout(function() {
-            this.slideNext();
-        }.bind(this), 6000);
+        this.time = setTimeout( () => { this.slideNext() }, 5000 );
     }
 }
 

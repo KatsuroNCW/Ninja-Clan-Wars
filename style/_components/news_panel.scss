@@ -30,6 +30,7 @@
         top: 0;
         height: 100%;
         z-index: 1;
+        @include mainFont();
 
         &:hover {
             background: transparentize($mainFontColor, 0.7);
@@ -116,6 +117,7 @@
     }
 
     &__title {
+        color: lighten($mainFontColor, 10%);
         @include desktop {
             font-size: 25px;
         }
@@ -128,6 +130,7 @@
     }
 
     &__info {
+        color: darken($mainFontColor, 10%);
         text-transform: uppercase;
         @include desktop {
             font-size: 14px;
