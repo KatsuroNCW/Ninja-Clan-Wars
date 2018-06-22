@@ -148,7 +148,7 @@
             transition: opacity 0.5s, border 0.5s;
 
             @include mobile {
-                width: 320px;
+                width: 100%;
                 margin: 5px auto;
                 box-sizing: border-box;
             }
@@ -185,7 +185,7 @@
 
         &__right {
             @include mobile {
-                width: 320px;
+                width: 100%;
                 margin: 5px auto;
                 box-sizing: border-box;
             }
@@ -245,7 +245,7 @@
             box-sizing: border-box;
 
             @include mobile {
-                width: 320px;
+                width: 100%;
                 margin: 5px auto;
                 box-sizing: border-box;
             }
@@ -285,7 +285,7 @@
             transition: background 0.5s, border 0.5s, color 0.5s;
 
             @include mobile {
-                width: 320px;
+                width: 100%;
                 margin: 5px auto;
                 box-sizing: border-box;
             }
@@ -329,53 +329,6 @@
                 color: #fff;
                 border: 1px solid #1c5b88;
             }
-        }
-    }
-}
-
-/* LAST POSTS */
-.last-posts {
-    background: #101010;
-
-    &__box {
-        display: flex;
-        flex-direction: column;
-        padding: 10px 0 30px;
-    }
-
-    &__item {
-        display: flex;
-        font-size: 15px;
-        margin: 1px 0;
-    }
-
-    &__date {
-        background: #0b4a77;
-        text-align: center;
-        border: 1px solid #1f1f1f;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @include tablet {
-            width: 200px;
-        }
-        @include desktop {
-            width: 200px;
-        }
-    }
-
-    &__link {
-        display: block;
-        background: #131313;
-        border: 1px solid #1f1f1f;
-        padding: 10px;
-        width: 100%;
-        transition: background 0.5s, color 0.5s;
-
-        &:hover {
-            background: #0b4a77;
-            color: #fff;
         }
     }
 }
