@@ -1,7 +1,8 @@
 const infoSwitcher = (function() {
     const displayFirstBox = function(boxes) {
         [].forEach.call(boxes, function(box) {
-            (box.dataset.item === '1') ? box.style.display = 'block' : box.style.display = 'none';
+            const boxMainClass = box.classList;
+            (box.dataset.item === '1') ? box.classList.add(boxMainClass[0] + '--active') : box.classList.remove(boxMainClass[0] + '--active');
         });
     };
 
@@ -23,7 +24,8 @@ const infoSwitcher = (function() {
             const buttonMainClass = button.classList;
             button.addEventListener('click', function() {
                 [].forEach.call(switcherBoxes, function(box) {
-                    (box.dataset.item === button.dataset.item) ? box.style.display = 'block' : box.style.display = 'none';
+                    const boxMainClass = box.classList;
+                    (box.dataset.item === button.dataset.item) ? box.classList.add(boxMainClass[0] + '--active') : box.classList.remove(boxMainClass[0] + '--active');
                 });
                 [].forEach.call(switcherButtons, function(btn) {
                     (button.dataset.item === btn.dataset.item) ? btn.classList.add(buttonMainClass[0] + '--active') : btn.classList.remove(buttonMainClass[0] + '--active');

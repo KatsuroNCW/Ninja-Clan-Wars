@@ -203,6 +203,10 @@
         flex-direction: column;
         margin: 0 30px 30px;
         @include mainFont();
+
+        @include mobile {
+            margin: 0 10px 30px;
+        }
     }
 
     &__item {
@@ -273,25 +277,48 @@
         }
     }
 
+    &__box {
+        position: relative;
+        height: 250px;
+    }
+
     &__item {
         background: $mainBackgroundColor;
-        display: block;
         padding: 15px;
         font-size: 16px;
         line-height: 22px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 0;
+        transition: 1s opacity, 1s visibility;
+        box-sizing: border-box;
+        overflow: auto;
 
         img {
             max-width: 100%;
+        }
+
+        &--active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
         }
     }
 }
 
 
 .summary {
+    position: relative;
+    height: 400px;
+    margin: 0 10px;
 
     &__nav {
         display: flex;
-        margin: 0 10px;
 
         &-item {
             background: $buttonBackgroundColor;
@@ -325,11 +352,27 @@
 
     &__box {
         @include mainFont();
-        margin: 0 10px;
         background: $mainBackgroundColor;
         padding: 20px 0 10px;
         border: 1px solid $mainBorderColor;
         max-height: 450px;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 0;
+        transition: 1s opacity, 1s visibility;
+        box-sizing: border-box;
+        overflow: auto;
+
+        &--active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+        }
     }
 
     &__heading {
