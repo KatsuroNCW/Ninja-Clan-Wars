@@ -67,23 +67,32 @@ class Topic {
 		}
 	}
 
-	public function updates($section_id) {
-		$topic_data = $this->_db->get('topics', array('topic_section', '=', $section_id), 'topic_id', 'DESC', 2)->results();
-		if(!empty($topic_data)) {
-			foreach ($topic_data as $topic) {
-				$first_post = $this->_db->get('posts', array('post_topic', '=', $topic->topic_id), 'post_id', 'ASC')->first();
-				$updates[] = array(
-					'topic_id' => $topic->topic_id,
-					'topic_name' => $topic->topic_name,
-					'topic_by' => $topic->topic_by,
-					'post_date' => $first_post->post_date,
-				);
-			}
+	public function newsSlider() {
+		$ads_data = $this->_db->get('topics', array('topic_section', '=', 1), 'topic_id', 'DESC', 2)->results();
+		$updates_data = $this->_db->get('topics', array('topic_section', '=', 6), 'topic_id', 'DESC', 2)->results();
+		$news_data = [];
 
-			return $updates;
-		} else {
-			return false;
+		foreach ($ads_data as $ad) {
+			$first_post = $this->_db->get('posts', array('post_topic', '=', $ad->topic_id), 'post_id', 'ASC')->first();
+			$news_data[] = array(
+				'topic_id' => $ad->topic_id,
+				'topic_name' => $ad->topic_name,
+				'topic_by' => $ad->topic_by,
+				'post_date' => $first_post->post_date,
+			);
 		}
+
+		foreach ($updates_data as $update) {
+			$first_post = $this->_db->get('posts', array('post_topic', '=', $update->topic_id), 'post_id', 'ASC')->first();
+			$news_data[] = array(
+				'topic_id' => $update->topic_id,
+				'topic_name' => $update->topic_name,
+				'topic_by' => $update->topic_by,
+				'post_date' => $first_post->post_date,
+			);
+		}
+
+		return (!empty($news_data)) ? $news_data : false;
 	}
 
 	public function postCounter($topic_id) {

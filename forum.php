@@ -27,27 +27,15 @@ $user_data = $user->data();
 <div class="news-panel wrapper">
 	<?php
 	$news = new Topic();
-	$news_data = $news->lastTopic(1);
+	$news_data = $news->newsSlider();
 	if($news_data) {
-		echo '<a href="viewtopic.php?id='.$news_data['topic_id'].'" class="news" style="background: url('.imageType('style/img/topic/'.$news_data['topic_id']).') center;">';
-			echo '<div class="news__container">';
-				echo '<h2 class="news__title">'.$news_data['topic_name'].'</h2>';
-				echo '<div class="news__info">'.$news_data['topic_by'].': '.dateFormat($news_data['post_date']).'</div>';
-			echo '</div>';
-		echo '</a>';
-	}
-
-	$update_data = $news->updates(6);
-	if($update_data) {
-		$tmp = 2;
-		foreach ($update_data as $update) {
-			echo '<a href="viewtopic.php?id='.$update['topic_id'].'" class="news" style="background: url('.imageType('style/img/topic/'.$update['topic_id']).') center;">';
+		foreach ($news_data as $value) {
+			echo '<a href="viewtopic.php?id='.$value['topic_id'].'" class="news" style="background: url('.imageType('style/img/topic/'.$value['topic_id']).') center;">';
 				echo '<div class="news__container">';
-					echo '<h2 class="news__title">'.$update['topic_name'].'</h2>';
-					echo '<div class="news__info">'.$update['topic_by'].': '.dateFormat($update['post_date']).'</div>';
+					echo '<h2 class="news__title">'.$value['topic_name'].'</h2>';
+					echo '<div class="news__info">'.$value['topic_by'].': '.dateFormat($value['post_date']).'</div>';
 				echo '</div>';
 			echo '</a>';
-			$tmp++;
 		}
 	}
 	?>
