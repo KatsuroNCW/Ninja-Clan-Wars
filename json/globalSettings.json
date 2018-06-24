@@ -2,5 +2,8 @@
 	"gender": ["nie określono", "mężczyzna", "kobieta"],
 	"clans": ["Uchiha", "Senju", "Nara", "Kiyoshi", "Namikaze", "Sabaku", "Ayatsuri", "Hyūga", "Yuki", "Inuzuka", "Kaguya", "Akimichi", "Aburame", "Futago", "Kuran Sen", "Kakukoro"],
 	"organizations": ["Wyrzutki", "Samotnicy"],
-	"kp_status": ["active", "inactive", "new"]
+	"kp_status": ["active", "inactive", "new"],
+	"jutsu_classification": ["Ninjutsu", "Taijutsu", "Genjutsu", "Fūinjutsu", "Summonjutsu"],
+	"jutsu_rank": ["D", "C", "B", "A", "S"],
+	"jutsu_nature": ["Katon", "Doton", "Suiton", "Fūton", "Raiton", "Shōton", "Mokuton", "Hyōton", "Yōton", "Futton", "Bakuton", "Shakuton", "Jiton", "none"]
 }

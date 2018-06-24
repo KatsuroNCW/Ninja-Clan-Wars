@@ -533,6 +533,26 @@ if(Session::exists('kp')) {
 					// TODO: statystyki gracza i panel zakupów (musi uwzględniac kupowanie pojedynczego skilla i kilku na raz)
 				} elseif (Input::get('section') === 'jutsus' && $kp_owner) {
 					// TODO: techniki
+					echo '<div class="kp-jutsu">';
+						if(!empty($kp->getValue('kp_list_of_jutsus'))) {
+							echo '<div class="kp-jutsu__container">';
+								foreach ($kp->getValue('kp_list_of_jutsus') as $id) {
+									$jutsu = new Jutsu($id);
+									$jutsu_nature = (empty($jutsu->getValue('jutsu_nature'))) ? 'none' : $jutsu->getValue('jutsu_nature');
+									echo '<a href="jutsu.php?id='.$id.'" class="kp-jutsu__item" data-cat="'.$jutsu->getValue('jutsu_classification').'" data-nature="'.$jutsu_nature.'" data-rank="'.$jutsu->getValue('jutsu_rank').'">';
+										echo '<img src="'.$jutsu->getJutsuImgUrl($jutsu->getValue('jutsu_name_romaji'), 'main').'">';
+										echo '<h2 class="kp-jutsu__title">['.$jutsu->getValue('jutsu_rank').'] '.$jutsu->getValue('jutsu_name_romaji').'</h2>';
+									echo '</a>';
+								}
+							echo '</div>';
+						} else {
+							echo '<div class="info-box__item info-box__item--error">';
+								echo '<i class="info-box__icon icon-attention"></i>';
+								echo '<p class="info-box__description">Nie masz opanowanych żadnych technik!</p>';
+							echo '</div>';
+						}
+					echo '</div>';
+					echo '<script defer src="js/kpJutsu.js"></script>';
 				} elseif (Input::get('section') === 'skills' && $kp_owner) {
 					// TODO: umiejętności
 				} elseif (Input::get('section') === 'items' && $kp_owner) {

@@ -28,7 +28,13 @@
 @import "_components/profile";
 
 // KP.PHP
-@import "_components/kp";
+@import "_components/kp/kp";
+@import "_components/kp/kp_stats";
+@import "_components/kp/kp_jutsu";
+@import "_components/kp/kp_skills";
+@import "_components/kp/kp_items";
+@import "_components/kp/kp_summary";
+@import "_components/kp/kp_notes";
 
 // VIEWTOPIC.PHP
 @import "_components/viewtopic";
