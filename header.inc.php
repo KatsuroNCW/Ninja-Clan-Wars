@@ -35,7 +35,7 @@
 					<li class="submenu__item"><a href="#">Style walki</a></li>
 					<li class="submenu__item"><a href="#">Żywioły chakry</a></li>
 					<li class="submenu__item"><a href="#">Specjalizacje</a></li>
-					<li class="submenu__item"><a href="#">Jutsu</a></li>
+					<li class="submenu__item"><a href="jutsulist.php">Jutsu</a></li>
 					<li class="submenu__item"><a href="#">Przedmioty</a></li>
 					<li class="submenu__item"><a href="#">Umiejętności</a></li>
 					<li class="submenu__item"><a href="#">Baza</a></li>

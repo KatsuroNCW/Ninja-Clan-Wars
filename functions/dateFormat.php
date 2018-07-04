@@ -24,10 +24,13 @@ function dateFormat($date) {
 		$year = substr($date, 0, 4);
 		$month = substr($date, 5, 2);
 		$day = substr($date, 8, 2);
-		if($year == date('Y')) {
-			return $day.' '.$names_of_months[$month].', '.substr($date, 10);
-		} else {
-			return $day.' '.$names_of_months[$month].' '.$year.', '.substr($date, 10);
+		$full_date = $day.' '.$names_of_months[$month];
+		if($year !== date('Y')) {
+			$full_date .= ' '.$year;
 		}
+		if(!empty(substr($date, 10))) {
+			$full_date .= ', '.substr($date, 10);
+		}
+		return $full_date;
 	}
 }

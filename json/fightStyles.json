@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Rakanken",
+    "bonus_type": "constant",
+    "description": "Ten styl walki koncentruje się na prostych, fizycznych atakach powiększonych o siłę użytkownika. Za pomocą prostych uderzeń dłoni, pchnięcia ramion, ciosów kolanami i łokciami. W ten prosty sposób, bazujący na sile można pokonać przeciwnika paroma ciosami."
+  },
+  {
+    "name": "Katana no tatakai",
+    "bonus_type": "constant",
+    "description": "Styl ten to coś w rodzaju początku do opanowania mistrzostwa walki bronią białą. Sam styl cechuje się siłą i szybkością ataków, co pozwala na niespotykanie silne ciosy, często kończące się śmiercią. Bonus jaki daje ten styl to wzrost siły i szybkości. Dodatkowo umożliwia opanowanie ostatniego poziomu mistrzostwa walki bronią białą."
+  },
+  {
+    "name": "Ōkashō",
+    "bonus_type": "constant",
+    "description": "Ōkashō tak jak rakanken również swoją potęgę czerpie z siły uderzeń, jednak w tym przypadku jest ona wzmocniona o chakrę użytkownika. Za jej pomocą każde uderzenie staje się dwukrotnie mocniejsze od normalnego ataku (siła x2). W przypadku tego stylu użytkownik koncentrują chakrę np. w ręku uwalnia ją tuż przed momentem uderzenia co daje nadzwyczajne efekty. Jeden taki cios kosztuje 5.000 chakry."
+  },
+  {
+    "name": "Suiken",
+    "bonus_type": "constant",
+    "description": "Chyba najbardziej nietypowy styl. Wypicie butelki Sake (należy zakupić) sprawia, że zaczynamy mieć kontrolę nad ciałem, a raczej ciało samo się porusza, bez porozumienia się z mózgiem. Jest wtedy doskonale zręczne i trudno zadać cios przez naszego wroga. Szybkość przeciwnika spada o 6pkt, a nasza reakcja jest większa o 15 punktów. Można użyć raz na walkę. Działa jedynie przez 5 postów. Po wypiciu Sake, butelkę tracimy i należy zakupić nową."
+  },
+  {
+    "name": "Kawazu Kumite",
+    "bonus_type": "constant",
+    "description": "Styl ten możliwy do nauczenia jest tylko przez ludzi, którzy opanowali Sage Mode. Bazuje on na chakrze natury i do jego użycia jest ona niezbędna. Użytkownika otacza aura z jego chakry natury i w ten sposób zwiększa jego statystyki (siła szybkość, reakcja +7pkt). Aura ta powoduje, że przeciwnik otrzymuje obrażenia również wtedy gdy atak minie go o 7 centymetrów, a to daje duże pole do popisu, ponieważ tej energii nie jest w stanie wychwycić żaden człowiek. Styl ten przez cały czas aktywacji wysysa chakrę z organizmu - 6.000 co turę."
+  },
+  {
+    "name": "Jūken",
+    "bonus_type": "constant",
+    "description": "Sekretny styl walki zarezerwowany jedynie dla posiadaczy unikatowego kekkei genkai: Byakugan. Sekret tej techniki nie jest do końca znany przeciętnemu wojownikowi. Żeby móc opanować Jūken i jego słabszą odmianę Shōtei należy wybrać ten styl walki jako pierwszy w akademii."
+  },
+  {
+    "name": "Gōken",
+    "bonus_type": "constant",
+    "description": "Styl, który kładzie nacisk na użycie ciała jako niezwykle śmiertelnej broni. Ciało jest jak maszyna: szybkie i ma zwiększoną reakcję (te atrybuty +8pkt na stałe). Po opanowaniu takiego stylu zwykła broń staje się całkowicie zbędna, ponieważ i bez niej można z łatwością zabić."
+  },
+  {
+    "name": "Kuikkufīto",
+    "bonus_type": "constant",
+    "description": "Tutaj cała filozofia walki opiera się na szybkości użytkownika. Dzięki niej jesteśmy w stanie wykonywać błyskawiczne i precyzyjne ataki (szybkość +12pkt). Styl ten patrząc z perspektywy obserwatora oraz przeciwnika jest bardzo efektowny."
+  },
+  {
+    "name": "Sutokariki",
+    "bonus_type": "constant",
+    "description": "Niektórzy ninja postanowili przenieść walkę Taijutsu do dalekiego dystansu. Każdy potrafi odpowiednio rzucić kunaiem, czy inną bronią do celu, ale dzięki tym technikom można manipulować torem lotu za pomocą np. metalowych linek oraz znacznie ograniczyć procent chybionych ataków (do 10%). Oznacza to, ze na 10 rzutów użytkownik chybia tylko jeden, ale to też bardzo rzadko się zdarza. Dzięki temu stylowi zwiększa się szybkość o 5pkt oraz możemy opanować ostatni i przedostatni poziom walki bronią dystansową."
+  }
+]

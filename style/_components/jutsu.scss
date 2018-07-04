@@ -1,0 +1,179 @@
+.jutsu {
+  background: none;
+  padding: 0;
+  text-transform: unset;
+  color: $mainFontColor;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__left {
+    margin: 0 10px 0 0;
+    width: 340px;
+    flex-grow: 1;
+
+    @include mobile {
+      width: 100%;
+      margin: 20px 0 0;
+    }
+  }
+
+  &__right {
+    width: 340px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    background: $buttonBackgroundColor;
+    padding: 8px 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #000;
+
+    &--title {
+      text-transform: none;
+    }
+  }
+
+  &__img-big {
+    img {
+      display: block;
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+  }
+  &__img-box {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 10px;
+
+    @include mobileTablet {
+      display: none;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__description {
+    @include mainFont();
+    font-size: 15px;
+    background: $grayBoxColor;
+    border-left: 1px solid $mainBorderColor;
+    border-right: 1px solid $mainBorderColor;
+    border-bottom: 1px solid $mainBorderColor;
+    padding: 10px;
+    margin: 0 0 10px;
+  }
+
+  &__more {
+    p {
+      @include mainFont();
+      font-size: 15px;
+      background: $grayBoxColor;
+      border: 1px solid $mainBorderColor;
+      padding: 10px;
+      margin: 0 0 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 2px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    p:first-child {
+      background: $buttonBackgroundColor;
+      padding: 8px;
+      text-transform: uppercase;
+      font-size: 14px;
+      text-align: right;
+      text-shadow: 0 0 5px #000;
+      width: 140px;
+      box-sizing: border-box;
+      flex-grow: 1;
+
+      @include mobile {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    p:last-child {
+      background: $grayBoxColor;
+      border-top: 1px solid $mainBorderColor;
+      border-right: 1px solid $mainBorderColor;
+      border-bottom: 1px solid $mainBorderColor;
+      font-size: 13px;
+      padding: 8px;
+      width: 200px;
+      box-sizing: border-box;
+      @include mainFont();
+
+      @include mobile {
+        width: 100%;
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        width: 15px;
+        float: left;
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+    @include mainFont();
+    text-align: right;
+    color: darken($mainFontColor, 20%);
+  }
+}
+
+.jutsulist {
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 10px;
+  }
+
+  &__box {
+    flex-grow: 1;
+    width: 100px;
+    margin: 0 1px;
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: $grayBoxColor;
+    border: 1px solid $mainBorderColor;
+    padding: 10px;
+    margin: 10px 0;
+  }
+}
